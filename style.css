@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Open sans', Arial, sans-serif;
+  font-family: "Open sans", Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -15,7 +15,7 @@ body {
 .hero {
   position: relative;
   height: 60vh;
-  background: url('images/DBFtitle.jpg') no-repeat center center/cover;
+  background: url("images/DBFtitle.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@ body {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -160,7 +160,7 @@ body {
 }
 
 .project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

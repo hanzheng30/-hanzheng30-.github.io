@@ -1,264 +1,407 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Han Zheng | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+      .project-details-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 20px auto;
+        gap: 40px;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Han Zheng | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    /* Existing styles remain unchanged, including font size increase for descriptions */
-    .project-details-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      max-width: 1000px;
-      margin: 20px auto;
-      gap: 40px;
-    }
-
-    .project-details-container.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .project-details-image {
-      flex: 0 0 30%;
-    }
-
-    .project-details-image img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .project-details-text {
-      flex: 0 0 60%;
-      text-align: left;
-    }
-
-    .lightbox-content h3 {
-      text-align: center;
-    }
-
-    /* Style for centered video in Stirling Engine project */
-    .project-video {
-      display: block;
-      max-width: 80%;
-      height: auto;
-      margin: 20px auto;
-    }
-
-    /* Font size increase for project descriptions */
-    .lightbox-content p,
-    .lightbox-content ul {
-      font-size: 1.125rem; /* Increased from default ~16px to 18px */
-    }
-
-    @media (max-width: 768px) {
-      .project-details-container,
       .project-details-container.reverse {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row-reverse;
       }
 
       .project-details-image {
-        flex: 0 0 auto;
-        margin-bottom: 20px;
+        flex: 0 0 40%; /* Increased from 30% to give more width */
+        height: 250px; /* Slightly reduced height, adjust as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white; /* Set background to white */
+      }
+
+      .project-details-image img {
+        max-width: 100%;
+        /* Set a max-height to respect the container's height */
+        max-height: 100%;
+        height: auto;
+        width: auto;
+        /* Use 'contain' to ensure the whole image is visible without being cropped */
+        object-fit: contain;
+        display: block;
       }
 
       .project-details-text {
-        flex: 0 0 auto;
+        flex: 0 0 60%;
+        text-align: left;
+      }
+
+      .lightbox-content h3 {
         text-align: center;
       }
 
+      /* Style for centered video in Stirling Engine project */
       .project-video {
-        max-width: 100%;
+        display: block;
+        max-width: 70%;
+        height: auto;
+        margin: 20px auto;
       }
 
-      /* Adjust font size for mobile */
+      .video-caption {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 1rem;
+      }
+
+      /* Font size increase for project descriptions */
       .lightbox-content p,
       .lightbox-content ul {
-        font-size: 1rem; /* ~16px for mobile */
+        font-size: 1.125rem; /* Increased from default ~16px to 18px */
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Hero Header -->
-  <header class="hero" data-aos="fade-in">
-    <div class="nav-container">
-      <nav id="nav-links">
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button id="hamburger">☰</button>
-    </div>
-    <div class="hero-content">
-      <h1>Han Zheng</h1>
-      <p class="subtitle">Mechanical Engineering Portfolio</p>
-    </div>
-  </header>
 
-  <!-- About Me Section -->
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <div class="about-image">
-        <img src="images/profile.JPG" alt="Han Zheng portrait" class="profile-img">
-      </div>
-      <div class="about-text">
-        <p>Hi! I’m Han, a junior studying Mechanical Engineering with a focus on Aerospace. My name is spelled just like Han Solo from <em>Star Wars</em>
-          and Han from <em>Fast & Furious</em>—though I haven’t piloted a spaceship or drifted through Tokyo (yet). I started out building things with hot
-           glue and cardboard, and now I use advanced engineering tools to take on real-world challenges. I’m driven by the belief that even small 
-           innovations can lead to meaningful change. Feel free to explore my projects and experiences!</p>
-      </div>
-    </div>
-  </section>
+      @media (max-width: 768px) {
+        .project-details-container,
+        .project-details-container.reverse {
+          flex-direction: column;
+          align-items: center;
+        }
 
-  <!-- Resume Section -->
-  <section id="resume" data-aos="fade-up">
-    <h2>Resume</h2>
-    <p><a href="HanZheng_Resume_Intern.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </section>
+        .project-details-image {
+          flex: 0 0 auto;
+          margin-bottom: 20px;
+        }
 
-  <!-- Projects Section -->
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <!-- Project 1: Placeholder -->
-      <div class="project-card" onclick="openProjectLightbox('placeholder')">
-        <img src="images/aec/aec_profile.jpg" alt="aec" class="project-img">
-        <span class="project-title">Albany Engineered Composites Internship</span>
-      </div>
-      <!-- Project 2: Design Build Fly -->
-      <div class="project-card" onclick="openProjectLightbox('dbf')">
-        <img src="images/dbf/plane_title.JPG" alt="DBF RC plane during manufacturing" class="project-img">
-        <span class="project-title">Design Build Fly</span>
-      </div>
-      <!-- Project 3: VfOx Accommodation, DAVINCI Mission -->
-      <div class="project-card" onclick="openProjectLightbox('vfox')">
-        <img src="images/vfox/Vfox1.jpg" alt="3D airflow simulation around VFOX descent sphere" class="project-img">
-        <span class="project-title">VFOX Accommodation, DAVINCI Mission</span>
-      </div>
-      <!-- Project 4: Acrylic Crane -->
-      <div class="project-card" onclick="openProjectLightbox('crane')">
-        <img src="images/crane/crane_part.jpg" alt="Acrylic crane on mounting plate" class="project-img">
-        <span class="project-title">Acrylic Crane</span>
-      </div>
-      <!-- Project 5: Stirling Engine -->
-      <div class="project-card" onclick="openProjectLightbox('stirling')">
-        <img src="images/engine/engine.jpg" alt="Stirling engine assembly" class="project-img">
-        <span class="project-title">Stirling Engine</span>
-      </div>
-      <!-- Project 6: Arcade Machine -->
-      <div class="project-card" onclick="openProjectLightbox('camel')">
-        <img src="images/arcade/camel.jpg" alt="Camel Jumper arcade machine" class="project-img">
-        <span class="project-title">Arcade Machine (Camel Jumper)</span>
-      </div>
-    </div>
-  </section>
+        .project-details-text {
+          flex: 0 0 auto;
+          text-align: center;
+        }
 
-  <!-- Contact Section -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: hzheng34@jh.edu</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/han-zheng-91b502257" target="_blank">Han Zheng</a></p>
-  </section>
+        .project-video {
+          max-width: 100%;
+        }
 
-  <!-- Back to Top Button -->
-  <button id="backToTop">↑</button>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-nav">
-      <button id="lightbox-hamburger">☰</button>
-      <nav id="lightbox-nav-links">
-        <a href="#about" onclick="navigateFromLightbox('about')">About</a>
-        <a href="#resume" onclick="navigateFromLightbox('resume')">Resume</a>
-        <a href="#projects" onclick="navigateFromLightbox('projects')">Projects</a>
-        <a href="#contact" onclick="navigateFromLightbox('contact')">Contact</a>
-      </nav>
-    </div>
-    <span class="close" onclick="closeLightbox()">×</span>
-    <div class="lightbox-content" id="project-lightbox-content"></div>
-    <div id="caption"></div>
-  </div>
-
-  <footer>
-    <p>© 2025 Han Zheng</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    // Main Navigation Hamburger Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Lightbox Navigation Hamburger Menu Toggle
-    const lightboxHamburger = document.getElementById('lightbox-hamburger');
-    const lightboxNavLinks = document.getElementById('lightbox-nav-links');
-
-    lightboxHamburger.addEventListener('click', () => {
-      lightboxNavLinks.classList.toggle('active');
-    });
-
-    // Back to Top Button
-    const backToTop = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
+        /* Adjust font size for mobile */
+        .lightbox-content p,
+        .lightbox-content ul {
+          font-size: 1rem; /* ~16px for mobile */
+        }
       }
-    });
+    </style>
+  </head>
+  <body>
+    <!-- Hero Header -->
+    <header class="hero" data-aos="fade-in">
+      <div class="nav-container">
+        <nav id="nav-links">
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="hamburger">☰</button>
+      </div>
+      <div class="hero-content">
+        <h1>Han Zheng</h1>
+        <p class="subtitle">Mechanical Engineering Portfolio</p>
+      </div>
+    </header>
 
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    <!-- About Me Section -->
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img
+            src="images/profile.JPG"
+            alt="Han Zheng portrait"
+            class="profile-img"
+          />
+        </div>
+        <div class="about-text">
+          <p>
+            Hi! I’m Han, a junior studying Mechanical Engineering with a focus
+            on Aerospace. My name is spelled just like Han Solo from
+            <em>Star Wars</em> and Han from <em>Fast & Furious</em>—though I
+            haven’t piloted a spaceship or drifted through Tokyo (yet). I
+            started out building things with hot glue and cardboard, and now I
+            use advanced engineering tools to take on real-world challenges. I’m
+            driven by the belief that even small innovations can lead to
+            meaningful change. Feel free to explore my projects and experiences!
+          </p>
+        </div>
+      </div>
+    </section>
 
-    // Project Data
-    const projects = {
-      placeholder: {
-        title: "Albany Engineered Composites Internship",
-        image: "images/aec/aec_profile.jpg",
-        alt: "aec",
-        details: `
-          <p>Coming soon...</p>
-        `
-      },
-      dbf: {
-        title: "Design Build Fly (DBF)",
-        image: "images/dbf/plane_title.JPG",
-        details: `
+    <!-- Resume Section -->
+    <section id="resume" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>
+        <a href="HanZheng_Resume.pdf" target="_blank"
+          >Download My Resume (PDF)</a
+        >
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Project 1: AEC -->
+        <div class="project-card" onclick="openProjectLightbox('aec')">
+          <img src="images/aec/aec_profile.jpg" alt="aec" class="project-img" />
+          <span class="project-title"
+            >Albany Engineered Composites Internship</span
+          >
+        </div>
+        <!-- Project 2: Design Build Fly -->
+        <div class="project-card" onclick="openProjectLightbox('dbf')">
+          <img
+            src="images/dbf/plane_title.JPG"
+            alt="DBF RC plane during manufacturing"
+            class="project-img"
+          />
+          <span class="project-title">Design Build Fly</span>
+        </div>
+        <!-- Project 3: VfOx Accommodation, DAVINCI Mission -->
+        <div class="project-card" onclick="openProjectLightbox('vfox')">
+          <img
+            src="images/vfox/Vfox1.jpg"
+            alt="3D airflow simulation around VFOX descent sphere"
+            class="project-img"
+          />
+          <span class="project-title">VFOX Accommodation, DAVINCI Mission</span>
+        </div>
+        <!-- Project 4: Acrylic Crane -->
+        <div class="project-card" onclick="openProjectLightbox('crane')">
+          <img
+            src="images/crane/crane_part.jpg"
+            alt="Acrylic crane on mounting plate"
+            class="project-img"
+          />
+          <span class="project-title">Acrylic Crane</span>
+        </div>
+        <!-- Project 5: Stirling Engine -->
+        <div class="project-card" onclick="openProjectLightbox('stirling')">
+          <img
+            src="images/engine/engine.jpg"
+            alt="Stirling engine assembly"
+            class="project-img"
+          />
+          <span class="project-title">Stirling Engine</span>
+        </div>
+        <!-- Project 6: Arcade Machine -->
+        <div class="project-card" onclick="openProjectLightbox('camel')">
+          <img
+            src="images/arcade/camel.jpg"
+            alt="Camel Jumper arcade machine"
+            class="project-img"
+          />
+          <span class="project-title">Arcade Machine (Camel Jumper)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: hzheng34@jh.edu</p>
+      <p>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/han-zheng-91b502257"
+          target="_blank"
+          >Han Zheng</a
+        >
+      </p>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">↑</button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-nav">
+        <button id="lightbox-hamburger">☰</button>
+        <nav id="lightbox-nav-links">
+          <a href="#about" onclick="navigateFromLightbox('about')">About</a>
+          <a href="#resume" onclick="navigateFromLightbox('resume')">Resume</a>
+          <a href="#projects" onclick="navigateFromLightbox('projects')"
+            >Projects</a
+          >
+          <a href="#contact" onclick="navigateFromLightbox('contact')"
+            >Contact</a
+          >
+        </nav>
+      </div>
+      <span class="close" onclick="closeLightbox()">×</span>
+      <div class="lightbox-content" id="project-lightbox-content"></div>
+      <div id="caption"></div>
+    </div>
+
+    <footer>
+      <p>© 2025 Han Zheng</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Main Navigation Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Lightbox Navigation Hamburger Menu Toggle
+      const lightboxHamburger = document.getElementById("lightbox-hamburger");
+      const lightboxNavLinks = document.getElementById("lightbox-nav-links");
+
+      lightboxHamburger.addEventListener("click", () => {
+        lightboxNavLinks.classList.toggle("active");
+      });
+
+      // Back to Top Button
+      const backToTop = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Project Data
+      const projects = {
+        aec: {
+          title: "Albany Engineered Composites Internship",
+          image: "images/aec/aec_profile.jpg",
+          details: `
+          <div class="project-details-container">
+            <div class="project-details-image">
+              <img src="images/aec/verve.jpg" alt="VERVE">
+            </div>
+            <div class="project-details-text">
+              <p> <u>Crimp vs Elastic Properties: </u>During my internship as a Mechanical Engineering R&T Intern at Albany Engineered Composites, I studied how fiber crimp—essentially 
+                the waviness of fibers—affects the elastic properties of 3D woven composites. Using a virtual model reconstructed from µCT scans, I 
+                processed and compacted the geometry in LS-DYNA, and then selected a representative unit cell to mesh and assign material properties. 
+                I conducted Abaqus simulations to determine the elastic modulus, shear modulus, and Poisson’s ratios in the warp, weft, and 
+                through-thickness directions. A total of 24 cases were analyzed, with 12 using polymer matrix composites (PMC) and 12 using ceramic 
+                composites (CC). The image on the left illustrates the meshed model.
+              </p>
+            </div>
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container reverse">
+            <div class="project-details-image">
+              <img src="images/aec/fixture.jpg" alt="fixture">
+            </div>
+            <div class="project-details-text">
+              <p> <u>Fixture Design: </u>Another project I undertook was designing a fixture to secure woven preforms during µCT scanning. The preforms had a fixed cross section of 
+                3.5" × 4" but varied in thickness up to 2". I designed the fixture to meet key constraints, including centering the preform in all three directions, 
+                accommodating thickness adjustments, and using a material compatible with µCT scanning and lower in density than carbon fiber. The final fixture was 
+                3D-printed in ABS. The isometric view of the fixture is shown on the right, and video illustrations are provided at the end of the page for further clarification. </p>
+            </div>
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container">
+            <div class="project-details-image">
+              <img src="images/aec/fea_stress_strain.jpg" alt="FEA Project">
+            </div>
+            <div class="project-details-text">
+              <p> <u> Compaction FEA: </u>Towards the end of my internship, I worked on addressing an issue with preform compaction. The preform would spring back after the compaction process, 
+                making it difficult to study its geometry in the compacted state. One solution was to scan the preform while it remained inside the compaction fixture. 
+                To ensure high-quality µCT scans, the fixture material needs to have a lower density than carbon fiber while maintaining sufficient stiffness. I 
+                used experimental data from prior tests to obtain elastic modulus values at selected strain levels and wrote a subroutine to model the nonlinear 
+                hyperelastic behavior of the preform. I chose maple wood as the fixture material for its low density, adequate stiffness, and ease of prototyping. </p>
+        
+            </div>
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container reverse">
+            <div class="project-details-image">
+              <img src="images/aec/tow.jpg" alt="Tow Friction">
+            </div>
+            <div class="project-details-text">
+              <p> <u>Friction Tests: </u>I spent a significant portion of my internship conducting experiments to study tow friction within woven preforms. Lower tow friction is known to 
+                improve bulk reduction and reduce the occurrence of fiber buckling during the forming process. For this project, I examined tow friction in preforms 
+                with varying architectures under different conditions: dry, wet, and elevated temperature (50-100 °C). The experimental setup is shown in the illustration 
+                on the right: the tow was clamped by an aluminum connector (shown in orange), which was attached to a rope that routed over a roller pulley. Weight was gradually 
+                added to the bucket until the tow pulled out of the preform, and the corresponding weight was recorded as the measure of tow friction.  </p>
+            </div>
+          </div>
+          
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <video class="project-video" controls>
+            <source src="images/aec/fixture_collapse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+            <p class="video-caption">Collapsing the exploded view of the fixture; the grey panel in the middle is the preform</p>
+    
+          <video class="project-video" controls>
+            <source src="images/aec/thickness_adjust.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>s
+            <p class="video-caption">Thickness adjustment to secure the preform</p>
+          
+          <video class="project-video" controls>
+            <source src="images/aec/fea_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+            <p class="video-caption">Animated compaction process</p>
+  
+
+        `,
+        },
+        dbf: {
+          title: "Design Build Fly (DBF)",
+          image: "images/dbf/plane_title.JPG",
+          details: `
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/dbf/plane.jpg" alt="DBF RC plane overview">
             </div>
             <div class="project-details-text">
-              <p> For the 2024–2025 season, I served as the Lead Mechanical Engineer for our competition team.
+              <p> <u>Overview: </u> For the 2024–2025 season, I served as the Lead Mechanical Engineer for our competition team.
                 The image on the left shows the aircraft we designed and built for this year’s competition. With limited professional mentorship, 
                 funding, and team members, I took on tasks ranging from calculating the minimum dimensions of the carbon fiber 
                 spar to performing manual composite layups for control surfaces.
               </p>
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container reverse">
             <div class="project-details-image">
               <img src="images/dbf/tail_cad.jpg" alt="CAD model of DBF tail assembly">
             </div>
             <div class="project-details-text">
-              <p>I led the design of the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
+              <p> <u>Empennage Design: </u>I led the design of the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
                 a tail box that enables quick attachment of the horizontal and vertical stabilizers. To reduce weight while maintaining 
                 structural strength, I performed a wet layup of carbon fiber on all control surfaces (rudder, elevator, and 
                 ailerons), which were initially shaped from hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces 
@@ -266,46 +409,53 @@
               
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/dbf/pylon.jpg" alt="DBF pylon structure">
             </div>
             <div class="project-details-text">
-              <p>I designed the pylon as an attachment structure to support an external, weight-carrying tank used as the payload. 
+              <p> <u>Pylon Design: </u>I designed the pylon as an attachment structure to support an external, weight-carrying tank used as the payload. 
                 The pylon itself can be attached to the wing spar through a slotted hole interface, allowing for quick installation and removal.
                 The payload can be secured to the pylon using zip ties. </p>
         
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container reverse">
             <div class="project-details-image">
               <img src="images/dbf/servo_part.jpg" alt="Servo motor component for DBF plane">
             </div>
             <div class="project-details-text">
-              <p>I customized servo motor platforms to mount the servos controlling the rudder, elevator, and ailerons. Each servo is
+              <p> <u>Servo Platform: </u>I customized servo motor platforms to mount the servos controlling the rudder, elevator, and ailerons. Each servo is
                  secured using multiple metal L-brackets, which I fabricated through shearing, bending, and punching. The L-brackets 
                  are bolted directly onto the plywood platforms. </p>
-
-
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/dbf/cfd.jpg" alt="DBF pylon structure">
             </div>
             <div class="project-details-text">
-              <p>To explore ways of reducing aerodynamic drag, I conducted a computational fluid dynamics (CFD) simulation of a custom 
+              <p> <u>Aerodynamic Modeling: </u>To explore ways of reducing aerodynamic drag, I conducted a computational fluid dynamics (CFD) simulation of a custom 
                 housing for the weight-carrying tank at an airspeed of 20 m/s using SimScale. Although the housing was not 
                 implemented in the final design, analyzing surface pressure distributions and surrounding velocity fields informed general flow
                 behavior and affected my design decisions.  </p>
         
             </div>
-        `
-      },
-      vfox: {
-        title: "VfOx Accommodation, DAVINCI Mission",
-        image: "images/vfox/Vfox1.jpg",
-        details: `
+        `,
+        },
+        vfox: {
+          title: "VfOx Accommodation, DAVINCI Mission",
+          image: "images/vfox/Vfox1.jpg",
+          details: `
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/vfox/Vfox1.jpg" alt="3D airflow simulation around VFOX descent sphere">
@@ -317,6 +467,9 @@
               
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container reverse">
             <div class="project-details-image">
               <img src="images/vfox/velocity_distribution.jpg" alt="Velocity distribution around VFOX descent sphere">
@@ -331,12 +484,12 @@
 
             </div>
           </div>
-        `
-      },
-      crane: {
-        title: "Acrylic Crane",
-        image: "images/crane/crane_part.jpg",
-        details: `
+        `,
+        },
+        crane: {
+          title: "Acrylic Crane",
+          image: "images/crane/crane_part.jpg",
+          details: `
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/crane/crane_top.jpg" alt="Top view of acrylic crane">
@@ -348,6 +501,9 @@
               
             </div>
           </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
           <div class="project-details-container reverse">
             <div class="project-details-image">
               <img src="images/crane/crane_cad.jpg" alt="CAD model of acrylic crane">
@@ -360,12 +516,12 @@
                 The measured beam deflection was 0.24 inches, which aligns with our designed safety factor of 2.</p>
             </div>
           </div>
-        `
-      },
-      stirling: {
-        title: "Stirling Engine",
-        image: "images/engine/engine.jpg",
-        details: `
+        `,
+        },
+        stirling: {
+          title: "Stirling Engine",
+          image: "images/engine/engine.jpg",
+          details: `
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/engine/engine.jpg" alt="Stirling engine assembly">
@@ -385,12 +541,12 @@
             <source src="images/engine/engine.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        `
-      },
-      camel: {
-        title: "Arcade Machine",
-        image: "images/arcade/camel.jpg",
-        details: `
+        `,
+        },
+        camel: {
+          title: "Arcade Machine",
+          image: "images/arcade/camel.jpg",
+          details: `
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/arcade/camel.jpg" alt="arcade machine">
@@ -402,10 +558,12 @@
                 dynamically to user interaction to enhance engagement. Additionally, the system should be capable of automatically resetting 
                 itself to be ready for the next user without manual intervention. The total budget for additional components is limited to $50, 
                 excluding the parts already provided in the standard Arduino kit.</p>
-              
             </div>
           </div>
-           <div class="project-details-container reverse">
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container reverse">
             <div class="project-details-image">
               <img src="images/arcade/electronics.jpg" alt="electronics">
             </div>
@@ -418,62 +576,72 @@
                 in the post-project survey.</p>
             </div>
           </div>
-        `
-      }
-    };
+        `,
+        },
+      };
 
-    // Project Lightbox Functionality
-  function openProjectLightbox(projectId) {
-    const project = projects[projectId];
-    const lightboxContent = document.getElementById('project-lightbox-content');
-    const caption = document.getElementById('caption');
-    // Push a new history state to ensure back button works
-    window.history.pushState({ page: projectId }, project.title, `#${projectId}`);
-    lightboxContent.innerHTML = `
+      // Project Lightbox Functionality
+      function openProjectLightbox(projectId) {
+        const project = projects[projectId];
+        const lightboxContent = document.getElementById(
+          "project-lightbox-content"
+        );
+        const caption = document.getElementById("caption");
+        // Push a new history state to ensure back button works
+        window.history.pushState(
+          { page: projectId },
+          project.title,
+          `#${projectId}`
+        );
+        lightboxContent.innerHTML = `
       <h3>${project.title}</h3>
       ${project.details}
     `;
-    caption.textContent = project.alt;
-    document.getElementById('lightbox').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    // Reset lightbox navigation state
-    lightboxNavLinks.classList.remove('active');
-  }
+        caption.textContent = project.alt;
+        document.getElementById("lightbox").style.display = "flex";
+        document.body.style.overflow = "hidden";
+        // Reset lightbox navigation state
+        lightboxNavLinks.classList.remove("active");
+      }
 
-  // Function to go back to the previous page
-  function goBack() {
-    window.history.back();
-  }
+      // Function to go back to the previous page
+      function goBack() {
+        window.history.back();
+      }
 
-  // Update closeLightbox to include go back functionality
-  function closeLightbox() {
-    // Pause all videos in the lightbox content
-    const videos = document.querySelectorAll('#project-lightbox-content video');
-    videos.forEach(video => video.pause());
-    
-    document.getElementById('lightbox').style.display = 'none';
-    document.body.style.overflow = 'auto';
-    // Add go back navigation
-    goBack();
-  }
+      // Update closeLightbox to include go back functionality
+      function closeLightbox() {
+        // Pause all videos in the lightbox content
+        const videos = document.querySelectorAll(
+          "#project-lightbox-content video"
+        );
+        videos.forEach((video) => video.pause());
 
-  function navigateFromLightbox(sectionId) {
-    // Pause all videos in the lightbox content
-    const videos = document.querySelectorAll('#project-lightbox-content video');
-    videos.forEach(video => video.pause());
-    
-    document.getElementById('lightbox').style.display = 'none';
-    document.body.style.overflow = 'auto';
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+        // Add go back navigation
+        goBack();
+      }
 
-  // Handle popstate to close lightbox if back button is used
-  window.addEventListener('popstate', () => {
-    if (document.getElementById('lightbox').style.display === 'flex') {
-      closeLightbox();
-    }
-  });
-</script>
-</body>
+      function navigateFromLightbox(sectionId) {
+        // Pause all videos in the lightbox content
+        const videos = document.querySelectorAll(
+          "#project-lightbox-content video"
+        );
+        videos.forEach((video) => video.pause());
+
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Handle popstate to close lightbox if back button is used
+      window.addEventListener("popstate", () => {
+        if (document.getElementById("lightbox").style.display === "flex") {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
 </html>
