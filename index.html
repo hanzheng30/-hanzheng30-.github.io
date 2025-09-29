@@ -22,7 +22,7 @@
 
       .project-details-image {
         flex: 0 0 40%; /* Increased from 30% to give more width */
-        height: 250px; /* Slightly reduced height, adjust as needed */
+        /* height: 250px; /* Slightly reduced height, adjust as needed */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,7 +41,7 @@
       }
 
       .project-details-text {
-        flex: 0 0 60%;
+        flex: 0 0 55%;
         text-align: left;
       }
 
@@ -381,6 +381,36 @@
           title: "Design Build Fly (DBF)",
           image: "images/dbf/plane_title.JPG",
           details: `
+          <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 30px;">2026 Competition</h2>
+
+          <div class="project-details-container">
+            <div class="project-details-image">
+              <img src="images/dbf/fuselage.jpg" alt="2026 DBF Plane">
+            </div>
+            <div class="project-details-text">
+              <p> <u>Overview: </u> For this year’s competition, I am serving as the team’s Chief Engineer, leading the fuselage design and overseeing the manufacturing processes. 
+                In this role, I directly manage a six-member subteam and support about fifteen team members overall. My primary goal is to develop a lightweight aircraft utilizing 
+                carbon fiber wet layups to maximize payload capacity, which is a key mission objective this year. The image on the left shows the current design in progress </p>
+            </div>
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container reverse">
+            <div class="project-details-image">
+              <img src="images/dbf/scaledown.jpg" alt="A key component from the 2026 project">
+            </div>
+            <div class="project-details-text">
+              <p><u>Fuselage Manufacturing: </u>On the right is a scaled-down fuselage model halve built to validate the manufacturing process and test structural integrity. I 3D-printed two PLA female mold halves and applied wax and PVA as mold release
+                agents on them. I then performed a three-layer layup of bidirectional 
+                carbon fiber cloth in a 0/90, ±45, 0/90 orientation. I am polishing the surface finishes and preparing to join the two halves to form a complete fuselage shell. </p>
+            </div>
+          </div>
+          <hr style="display: block; height: 2px; background: #cccccc; width: 90%; margin: 70px auto; border: none;">
+
+
+          <h2 style="text-align: center; font-size: 1.8rem; margin-top: 50px; margin-bottom: 30px;">2025 Competition</h2>
+
           <div class="project-details-container">
             <div class="project-details-image">
               <img src="images/dbf/plane.jpg" alt="DBF RC plane overview">
@@ -398,10 +428,10 @@
 
           <div class="project-details-container reverse">
             <div class="project-details-image">
-              <img src="images/dbf/tail_cad.jpg" alt="CAD model of DBF tail assembly">
+              <img src="images/dbf/layup.jpg" alt="CAD model of DBF tail assembly">
             </div>
             <div class="project-details-text">
-              <p> <u>Empennage Design: </u>I led the design of the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
+              <p> <u>Empennage Design and Manufacturing: </u>I assisted with the design of the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
                 a tail box that enables quick attachment of the horizontal and vertical stabilizers. To reduce weight while maintaining 
                 structural strength, I performed a wet layup of carbon fiber on all control surfaces (rudder, elevator, and 
                 ailerons), which were initially shaped from hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces 
@@ -432,8 +462,8 @@
             </div>
             <div class="project-details-text">
               <p> <u>Servo Platform: </u>I customized servo motor platforms to mount the servos controlling the rudder, elevator, and ailerons. Each servo is
-                 secured using multiple metal L-brackets, which I fabricated through shearing, bending, and punching. The L-brackets 
-                 are bolted directly onto the plywood platforms. </p>
+                secured using multiple metal L-brackets, which I fabricated through shearing, bending, and punching. The L-brackets 
+                are bolted directly onto the plywood platforms. </p>
             </div>
           </div>
 
@@ -445,12 +475,13 @@
             </div>
             <div class="project-details-text">
               <p> <u>Aerodynamic Modeling: </u>To explore ways of reducing aerodynamic drag, I conducted a computational fluid dynamics (CFD) simulation of a custom 
-                housing for the weight-carrying tank at an airspeed of 20 m/s using SimScale. Although the housing was not 
+                housing for the weight-carrying tank at an airspeed of 20 m/s using SimScale. Although the housing was not 
                 implemented in the final design, analyzing surface pressure distributions and surrounding velocity fields informed general flow
                 behavior and affected my design decisions.  </p>
         
             </div>
-        `,
+          </div>
+      `,
         },
         vfox: {
           title: "VfOx Accommodation, DAVINCI Mission",
