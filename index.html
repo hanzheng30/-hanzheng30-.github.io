@@ -11,7 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        max-width: 1000px;
+        max-width: 1300px;
         margin: 20px auto;
         gap: 40px;
       }
@@ -47,6 +47,15 @@
 
       .lightbox-content h3 {
         text-align: center;
+      }
+
+      /* ADD THESE TWO NEW CLASSES */
+      .project-details-image-large {
+        flex: 0 0 60%; /* Increase image width from 40% to 60% */
+      }
+
+      .project-details-text-small {
+        flex: 0 0 35%; /* Decrease text width from 55% to 35% */
       }
 
       /* Style for centered video in Stirling Engine project */
@@ -387,23 +396,23 @@
               <img src="images/dbf/fuselage.jpg" alt="2026 DBF Plane">
             </div>
             <div class="project-details-text">
-              <p> <u>Overview: </u> For this year’s competition, I am serving as the team’s Chief Engineer, overseeing the entire process from conceptual design to manufacturing across all subteams
+              <p> <u>Overview: </u> For this year’s competition, I am serving as the team’s Chief Engineer, overseeing all stages of the aircarft development process, from conceptual design to manufacturing across all subteams
                 In addition to managing a 15-member team, I am directly responsible for much of the aircraft’s design and fabrication, with a particular focus on fuselage design and integration. My primary goal is to develop a lightweight aircraft utilizing 
-                fiber wet layup to maximize payload capacity, which is a key mission objective this year. The image on the left shows the preliminary design of the aircraft. </p>       
+                fiber wet layup to maximize payload capacity, which is a key mission objective this year. The image on the left shows the preliminary CAD design of the aircraft. </p>       
             </div>
           </div>
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
           <div class="project-details-container reverse">
-            <div class="project-details-image">
+            <div class="project-details-image project-details-image-large">
               <img src="images/dbf/scaledown.jpg" alt="A key component from the 2026 project">
             </div>
-            <div class="project-details-text">
-              <p><u>Fuselage Manufacturing: </u>On the right is a scaled-down fuselage halve built to validate the manufacturing process and test structural integrity. I collaborated with team members to prepare 
-                toolpaths in VCarve and CNC mill two female mold halves from XPS foam. I treated the molds with a layer of coating epoxy to smooth out the surface and 
-                applied multiple layers of PVA as mold release agents. I then performed a three-layer layup of bidirectional 
-                carbon fiber cloth in a 0/90°, ±45°, 0/90° orientation. Lastly, I vacuum bagged both halves. I am currently polishing the surfaces and preparing to join the two halves to form a complete fuselage shell. </p>
+            <div class="project-details-text project-details-text-small">
+              <p><u>Fuselage Manufacturing: </u>To successfully manufacture a lightweight carbon fiber fuselage, I first experimented with a scaled-down prototype (top-left), showing one half of the fuselage. The female mold for this prototype was CNC-milled using 
+                toolpaths generated in VCarve. After validating the manufacturing worflow, I progressed to the full-scale fuselage. I treated the mold with a layer of coating epoxy to create a solid mold surface. After multiple iterations of sanding, I applied three layers of PVA as mold release agents. 
+                Alongside my team members, I performed a three-layer layup of 2×2 twill weave carbon fiber cloth in the 0/90°, ±45°, 0/90° orientation. After applying release fabrics, I vacuum-bagged the layup at room temperature for nine hours to cure. The rest of the images on 
+                the right show the top-half female mold for the fuselage and me performing the wet layup.</p>
             </div>
           </div>
 
@@ -454,10 +463,10 @@
               <img src="images/dbf/layup.jpg" alt="CAD model of DBF tail assembly">
             </div>
             <div class="project-details-text">
-              <p> <u>Empennage Design and Manufacturing: </u>I assisted with the design of the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
+              <p> <u>Empennage Design and Manufacturing: </u>I designed the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
                 a tail box that enables quick attachment of the horizontal and vertical stabilizers. To reduce weight while maintaining 
                 structural strength, I performed a wet layup of carbon fiber on all control surfaces (rudder, elevator, and 
-                ailerons), which were initially shaped from hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces 
+                ailerons), which were initially hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces 
                 to improve aerodynamics and aesthetics. </p>
               
             </div>
