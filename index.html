@@ -108,7 +108,6 @@
     </style>
   </head>
   <body>
-    <!-- Hero Header -->
     <header class="hero" data-aos="fade-in">
       <div class="nav-container">
         <nav id="nav-links">
@@ -125,7 +124,6 @@
       </div>
     </header>
 
-    <!-- About Me Section -->
     <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <div class="about-container">
@@ -142,15 +140,14 @@
             Aerospace. My name is spelled just like Han Solo from
             <em>Star Wars</em> and Han from <em>Fast & Furious</em>—though I
             haven’t piloted a spaceship or drifted through Tokyo (yet). I really
-            enjoy designing, verifying my designs through simulation and
-            analysis, and then fabricating them into realities. Feel free to
-            explore my projects and experiences!
+            enjoy designing (especially airplanes!), verifying my designs
+            through simulation and analysis, and then fabricating them into
+            realities. Feel free to explore my projects and experiences!
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume" data-aos="fade-up">
       <h2>Resume</h2>
       <p>
@@ -160,18 +157,16 @@
       </p>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <div class="project-grid">
-        <!-- Project 1: AEC -->
         <div class="project-card" onclick="openProjectLightbox('aec')">
           <img src="images/aec/aec_profile.jpg" alt="aec" class="project-img" />
           <span class="project-title"
             >Albany Engineered Composites Internship</span
           >
         </div>
-        <!-- Project 2: Design Build Fly -->
+
         <div class="project-card" onclick="openProjectLightbox('dbf')">
           <img
             src="images/dbf/plane_title.JPG"
@@ -180,7 +175,16 @@
           />
           <span class="project-title">Design Build Fly</span>
         </div>
-        <!-- Project 3: VfOx Accommodation, DAVINCI Mission -->
+
+        <div class="project-card" onclick="openProjectLightbox('simulation')">
+          <img
+            src="images/simulation/title.jpg"
+            alt="Structural & Fluid Simulation"
+            class="project-img"
+          />
+          <span class="project-title">Structural & Fluid Simulation</span>
+        </div>
+
         <div class="project-card" onclick="openProjectLightbox('vfox')">
           <img
             src="images/vfox/Vfox1.jpg"
@@ -189,7 +193,7 @@
           />
           <span class="project-title">VFOX Accommodation, DAVINCI Mission</span>
         </div>
-        <!-- Project 4: Acrylic Crane -->
+
         <div class="project-card" onclick="openProjectLightbox('crane')">
           <img
             src="images/crane/crane_part.jpg"
@@ -198,7 +202,7 @@
           />
           <span class="project-title">Acrylic Crane</span>
         </div>
-        <!-- Project 5: Stirling Engine -->
+
         <div class="project-card" onclick="openProjectLightbox('stirling')">
           <img
             src="images/engine/engine.jpg"
@@ -207,19 +211,9 @@
           />
           <span class="project-title">Stirling Engine</span>
         </div>
-        <!-- Project 6: Arcade Machine -->
-        <div class="project-card" onclick="openProjectLightbox('camel')">
-          <img
-            src="images/arcade/camel.jpg"
-            alt="Camel Jumper arcade machine"
-            class="project-img"
-          />
-          <span class="project-title">Arcade Machine (Camel Jumper)</span>
-        </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <p>Email: hzheng34@jh.edu</p>
@@ -233,10 +227,8 @@
       </p>
     </section>
 
-    <!-- Back to Top Button -->
     <button id="backToTop">↑</button>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
       <div class="lightbox-nav">
         <button id="lightbox-hamburger">☰</button>
@@ -260,7 +252,6 @@
       <p>© 2025 Han Zheng</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -423,7 +414,7 @@
               <img src="images/dbf/wing_fea.jpg" alt="wing fea">
             </div>
             <div class="project-details-text">
-              <p> <u>Composite FEA: </u> To validate the wing's structural design, I performed a Finite Element Analysis (FEA) in Abaqus. The model simulated an assembly of an XPS foam core insert, an internal carbon fiber spar, and a skin made 
+              <p> <u>Composite FEA: </u> To validate the wing's structural design, I performed a Finite Element Analysis (FEA) in Abaqus (free student version). The model simulated an assembly of an XPS foam core insert, an internal carbon fiber spar, and a skin made 
                 from wet layup of two layers of ±45° bidirectional carbon fiber. A distributed lift force (scaled to simulate a 6G maneuver) calculated from aerodynamic parameters, was applied to the cantilevered wing structure. The results confirmed 
                 the design's integrity, showing minimal deflection and stress levels safely below material failure points. </p>
             </div>
@@ -437,6 +428,9 @@
               </a>
             </p>
           </div>
+          
+          <img src="images/dbf/latest.jpg" alt="Latest Aircraft Update" class="project-video" style="border-radius: 4px;">
+          <p class="video-caption">Latest Aircraft Update</p>
 
           <hr style="display: block; height: 2px; background: #cccccc; width: 90%; margin: 70px auto; border: none;">
 
@@ -514,6 +508,37 @@
             </div>
           </div>
       `,
+        },
+        simulation: {
+          title: "Structural & Fluid Simulation",
+          image: "images/simulation/title.jpg",
+          details: `
+          <div class="project-details-container">
+            <div class="project-details-image">
+              <img src="images/simulation/a380.jpg" alt="A380 Simulation">
+            </div>
+            <div class="project-details-text">
+              <p> <u>FEA Midterm Project: </u> For my FEA midterm project, I analyzed the structural integrity of an A380 fuselage section using 
+                <strong> Creo Simulate</strong>. The model included the fuselage skin, longerons, and frames, and for simplicity I used Al7075-T6 and Al2024-T3 as 
+                the primary materials. I evaluated three load cases: internal pressurization (result contour shown on the left), bending, and torsion. To ensure computational efficiency, I 
+                applied beam and shell idealizations. A mesh sensitivity study was performed by comparing default meshes with refined multi-pass meshes. 
+                The results showed that Von Mises stresses and displacements remained within the required safety factor of 1.5 and satisfied all deflection limits. 
+                In addition to this project, I practiced mesh controls, thermal analysis, topology optimization, and many other tools in Creo Simulate. </p>
+            </div>
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div class="project-details-container reverse">
+            <div class="project-details-image">
+              <img src="images/simulation/dbf.jpg" alt="DBF Simulation">
+            </div>
+            <div class="project-details-text">
+              <p> <u>FEA Final Project: </u> For my FEA final project, I am currently simulating a drop test and a torsion test to the Design/Build/Fly aircraft that I designed to ensure the 
+                aircraft does not fracture upon hard landing. The simulations will be done in <strong>ANSYS</strong>.  </p>
+            </div>
+          </div>
+          `,
         },
         vfox: {
           title: "VfOx Accommodation, DAVINCI Mission",
@@ -604,41 +629,6 @@
             <source src="images/engine/engine.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        `,
-        },
-        camel: {
-          title: "Arcade Machine",
-          image: "images/arcade/camel.jpg",
-          details: `
-          <div class="project-details-container">
-            <div class="project-details-image">
-              <img src="images/arcade/camel.jpg" alt="arcade machine">
-            </div>
-            <div class="project-details-text">
-              <p> For this project, I was tasked with building a cultural-themed arcade machine that incorporates both interactive and 
-                responsive elements. The design must include at least one sensor and one controller device, such as a button or joystick, 
-                to enable user input. It must feature moving parts that respond to player actions, as well as lights and sounds that react 
-                dynamically to user interaction to enhance engagement. Additionally, the system should be capable of automatically resetting 
-                itself to be ready for the next user without manual intervention. The total budget for additional components is limited to $50, 
-                excluding the parts already provided in the standard Arduino kit.</p>
-            </div>
-          </div>
-
-          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
-
-          <div class="project-details-container reverse">
-            <div class="project-details-image">
-              <img src="images/arcade/electronics.jpg" alt="electronics">
-            </div>
-            <div class="project-details-text">
-              <p> For my team's project, we designed a game similar to a skee ball machine. I designed the timing belt system with gears to 
-                enable moving obstacles, along with the ramp, using SolidWorks. During assembly, I troubleshot wiring issues by consulting circuit 
-                diagrams and conducting iterative test trials. I integrated breadboards, Arduino UNOs, and other electronics into the machine’s 
-                structure, making necessary mechanical adjustments—such as attaching beam-breaker sensors to both sides of the return chute 
-                for accurate score detection. Our arcade machine performed well during the final exhibit and was rated the second-most fun game 
-                in the post-project survey.</p>
-            </div>
-          </div>
         `,
         },
       };
