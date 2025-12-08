@@ -518,7 +518,7 @@
               <img src="images/simulation/a380.jpg" alt="A380 Simulation">
             </div>
             <div class="project-details-text">
-              <p> <u>FEA Midterm Project: </u> For my FEA midterm project, I analyzed the structural integrity of an A380 fuselage section using 
+              <p> <u>FEA Midterm Project: </u> For my midterm project in the FEA course, I analyzed the structural integrity of an A380 fuselage section using 
                 <strong> Creo Simulate</strong>. The model included the fuselage skin, longerons, and frames, and for simplicity I used Al7075-T6 and Al2024-T3 as 
                 the primary materials. I evaluated three load cases: internal pressurization (result contour shown on the left), bending, and torsion. To ensure computational efficiency, I 
                 applied beam and shell idealizations. A mesh sensitivity study was performed by comparing default meshes with refined multi-pass meshes. 
@@ -529,14 +529,41 @@
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
-          <div class="project-details-container reverse">
-            <div class="project-details-image">
-              <img src="images/simulation/dbf.jpg" alt="DBF Simulation">
+          <div style="display: flex; gap: 30px; align-items: flex-start; max-width: 1300px; margin: 0 auto;">
+            
+            <div style="flex: 0 0 60%;">
+              
+              <video controls style="width: 100%; display: block; margin: 0; padding: 0;">
+                  <source src="images/simulation/plane_main.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+
+              <div style="display: flex; width: 100%; margin: 0; padding: 0;">
+                 <video controls style="width: 50%; display: block; margin: 0; padding: 0; object-fit: cover;">
+                  <source src="images/simulation/main_gear.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                 <video controls style="width: 50%; display: block; margin: 0; padding: 0; object-fit: cover;">
+                  <source src="images/simulation/tail_gear.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
             </div>
-            <div class="project-details-text">
-              <p> <u>FEA Final Project: </u> For my FEA final project, I am currently simulating a drop test and a torsion test to the Design/Build/Fly aircraft that I designed to ensure the 
-                aircraft does not fracture upon hard landing. The simulations will be done in <strong>ANSYS</strong>.  </p>
+
+            <div style="flex: 1; text-align: left; padding-left: 10px;">
+              <p style="margin-top: 0;"> 
+                <u>FEA Final Project: </u> For my final project, I simulated both a drop test and a torsion test for the Design/Build/Fly aircraft I designed. 
+                The goal was to ensure the airframe can withstand a hard landing without fracturing and sustain torsional loads during flight. All simulations were performed in ANSYS, and the results 
+                are shown on the left.
+                <br><br>
+                The model includes the carbon fiber fuselage shell and the landing gear assemblies. The fuselage shell was prepared in ACP (Pre) using a custom layup configuration (described in more detail on the Design/Build/Fly project page). 
+                The main gear and tail gear were modeled as separate solid bodies. The drop test was conducted using an explicit dynamics simulation in which the aircraft was released from a height of 2 feet. 
+                For the torsion test, a 150 lb-in moment was applied to the fuselage. From these analyses, I identified the high-stress regions most susceptible to failure, and I plan to reinforce those areas 
+                with additional carbon fiber strips. 
+              </p>
             </div>
+
           </div>
           `,
         },
