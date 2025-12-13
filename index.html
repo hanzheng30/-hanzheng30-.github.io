@@ -140,7 +140,7 @@
             Aerospace. My name is spelled just like Han Solo from
             <em>Star Wars</em> and Han from <em>Fast & Furious</em>—though I
             haven’t piloted a spaceship or drifted through Tokyo (yet). I really
-            enjoy designing (especially airplanes!), verifying my designs
+            enjoy designing (especially aircrafts!), verifying my designs
             through simulation and analysis, and then fabricating them into
             realities. Feel free to explore my projects and experiences!
           </p>
@@ -312,7 +312,7 @@
 
           <div class="project-details-container reverse">
             <div class="project-details-image">
-              <img src="images/aec/fixture.jpg" alt="fixture">
+              <img src="images/aec/fixture.jpg" alt="fixture" style="max-width: 60%; margin: 0 auto;">
             </div>
             <div class="project-details-text">
               <p> <u>Fixture Design: </u>Another project I undertook was designing a fixture to secure woven preforms during µCT scanning. The preforms had a fixed cross section of 
@@ -470,7 +470,7 @@
 
           <div class="project-details-container">
             <div class="project-details-image">
-              <img src="images/dbf/pylon.jpg" alt="DBF pylon structure">
+              <img src="images/dbf/pylon.jpg" alt="DBF pylon structure" style="max-width: 70%; margin: 0 auto;">
             </div>
             <div class="project-details-text">
               <p> <u>Pylon Design: </u>I designed the pylon as an attachment structure to support an external, weight-carrying tank used as the payload. 
@@ -484,7 +484,7 @@
 
           <div class="project-details-container reverse">
             <div class="project-details-image">
-              <img src="images/dbf/servo_part.jpg" alt="Servo motor component for DBF plane">
+              <img src="images/dbf/servo_part.jpg" alt="Servo motor component for DBF plane" style="max-width: 60%; margin: 0 auto;">
             </div>
             <div class="project-details-text">
               <p> <u>Servo Platform: </u>I customized servo motor platforms to mount the servos controlling the rudder, elevator, and ailerons. Each servo is
@@ -561,6 +561,30 @@
                 The main gear and tail gear were modeled as separate solid bodies. The drop test was conducted using an explicit dynamics simulation in which the aircraft was released from a height of 2 feet. 
                 For the torsion test, a 150 lb-in moment was applied to the fuselage. From these analyses, I identified the high-stress regions most susceptible to failure, and I plan to reinforce those areas 
                 with additional carbon fiber strips. 
+                <br><br>
+                Besides this project, I have also practiced hexahedral meshing complex parts, implementing various types of contacts, performing nonlinear simulations, etc. 
+              </p>
+            </div>
+
+          </div>
+
+          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+          <div style="display: flex; gap: 30px; align-items: flex-start; max-width: 1300px; margin: 0 auto;">
+            
+            <div style="flex: 0 0 50%; display: flex; flex-direction: column; gap: 10px;">
+               <img src="images/simulation/streamline.png" alt="CFD Streamline" style="width: 100%; height: auto; display: block;">
+               <img src="images/simulation/contour.png" alt="CFD Contour" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <div style="flex: 1; text-align: left; padding-left: 10px;">
+              <p style="margin-top: 0;"> 
+                <u>Landing Gear Fairing CFD Simulation: </u> 
+                To improve the aerodynamic efficiency of the Design/Build/Fly aircraft, I conducted a CFD analysis in ANSYS CFX to evaluate whether the drag reduction from landing gear wheel fairings 
+                justified their added weight. Using the Shear Stress Transport (SST) turbulence model with an inlet velocity of 26 m/s, I simulated airflow over both exposed and faired landing gear
+                 configurations. Selected results, including streamlines and velocity contours, are shown. The fairings reduced wake turbulence and decreased drag by 0.076 N (≈5%). A trade-off 
+                 analysis comparing this drag savings to the added weight penalty (0.392 N) resulted in a net aerodynamic benefit of 0.027 N, confirming that the fairings improve overall aircraft 
+                 performance.
               </p>
             </div>
 
@@ -642,7 +666,7 @@
               <img src="images/engine/engine.jpg" alt="Stirling engine assembly">
             </div>
             <div class="project-details-text">
-              <p>For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components with GD&T. I followed detailed 
+              <p>For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components. I followed detailed 
                 process sheets provided for some parts and developed my own for others, specifying machining steps such as end mill diameter 
                 selection, chamfering requirements, and appropriate spindle speeds on the lathe. Using the lathe, mill, and other machine tools 
                 in the lab, I manufactured most of the components, including the piston wheel, piston housing, and piston post. I produced the 
