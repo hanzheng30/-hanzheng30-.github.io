@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -194,22 +194,22 @@
           <span class="project-title">VFOX Accommodation, DAVINCI Mission</span>
         </div>
 
-        <div class="project-card" onclick="openProjectLightbox('crane')">
+        <div class="project-card" onclick="openProjectLightbox('mesd')">
           <img
-            src="images/crane/crane_part.jpg"
-            alt="Acrylic crane on mounting plate"
+            src="images/MESD/cad2.png"
+            alt="Senior Design Project"
             class="project-img"
           />
-          <span class="project-title">Acrylic Crane</span>
+          <span class="project-title">Senior Design Project</span>
         </div>
 
-        <div class="project-card" onclick="openProjectLightbox('stirling')">
+        <div class="project-card" onclick="openProjectLightbox('academic')">
           <img
             src="images/engine/engine.jpg"
-            alt="Stirling engine assembly"
+            alt="Additional Academic Projects"
             class="project-img"
           />
-          <span class="project-title">Stirling Engine</span>
+          <span class="project-title">Additional Academic Projects</span>
         </div>
       </div>
     </section>
@@ -384,7 +384,7 @@
 
           <div class="project-details-container">
             <div class="project-details-image">
-              <img src="images/dbf/fuselage.jpg" alt="2026 DBF Plane">
+              <img src="images/dbf/fuselage.png" alt="2026 DBF Plane">
             </div>
             <div class="project-details-text">
               <p> <u>Overview: </u> For this year’s competition, I am serving as the team’s Chief Engineer, overseeing all stages of the aircraft development process, from conceptual design to manufacturing across all subteams.
@@ -433,14 +433,29 @@
           </div>
 
           <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
-            <p>For more details about our aircraft design, see the competition proposal attached below:</p>
+            <p>For more details about our aircraft design, see the competition report attached below:</p>
             <p style="margin-top: 10px; font-size: 1.125rem;">
-              <a href="2026DBF_JOHNS_HOPKINS_UNIVERSITY_PROPOSAL.pdf" target="_blank">
-                Download the 2026 Competition Proposal (PDF)
+            <a href="2026DBF_JOHNS_HOPKINS_UNIVERSITY_DESIGN_REPORT.pdf" target="_blank">
+                Download the 2026 Competition Report (PDF)
               </a>
             </p>
           </div>
           
+          <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+            <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 15px;">Below is the drawing packages of the aircraft I made. </p>
+    
+              <div style="width: 100%; max-width: 1000px; margin: 20px auto; border: 1px solid #ccc;">
+                <iframe 
+                  src="dbf_drawing.pdf" 
+                  width="100%" 
+                  height="600px" 
+                  style="border: none;">
+                </iframe>
+              </div>
+            <p style="margin-top: 10px; font-size: 1.125rem;">
+        </p>
+      </div>
+
           <img src="images/dbf/latest.jpg" alt="Latest Aircraft Update" class="project-video" style="border-radius: 4px;">
           <p class="video-caption">Latest Aircraft Update</p>
 
@@ -637,62 +652,114 @@
           </div>
         `,
         },
-        crane: {
-          title: "Acrylic Crane",
-          image: "images/crane/crane_part.jpg",
+        mesd: {
+          title: "Senior Design Project",
+          image: "images/MESD/cad.png",
           details: `
-          <div class="project-details-container">
-            <div class="project-details-image">
-              <img src="images/crane/crane_top.jpg" alt="Top view of acrylic crane">
-            </div>
-            <div class="project-details-text">
-              <p>In this project, we are required to design and construct a crane that is capable of lifting a 10lb weight up by one inch under 
-                one minute. The crane should not have a maximum deflection of more than 0.5”. We are given a 6V gearmotor with a stall torque of 
-                12 oz-in and a 7.75” x 7.75” x ¼” acrylic plate, and we are allowed to purchase $25 worth of materials. </p>
-              
-            </div>
-          </div>
+  <div class="project-details-container">
+    <div class="project-details-image">
+      <img src="images/MESD/cad.png" alt="Senior Design CAD">
+    </div>
+    <div class="project-details-text">
+      <p> <u>MRI Motion Platform:</u> This project, sponsored by the Kennedy Krieger Institute, involves 
+        designing an MRI-compatible motion platform that precisely moves a head phantom in controlled patterns to evaluate and improve MRI motion-correction systems. My team 
+        is currently developing a hydraulically actuated, three-degree-of-freedom (3-DOF) platform consisting of two linear stages and one rotational stage mounted on the 
+        MRI test bed. I am primarily responsible for the structural design and analysis. The head phantom will be mounted on the top stage and positioned within the MRI head coil during testing.
+        <i>Note that the design shown is an ongoing iteration and may be incomplete.</i>  </p>
+    </div>
+  </div>
 
-          <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+  <div style="width: 100%; margin: 30px 0;">
+    <div style="display: flex; width: 100%; gap: 10px; justify-content: center;">
+        <video style="width: 50%; height: auto;" autoplay muted loop playsinline>
+          <source src="images/MESD/vid2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video style="width: 50%; height: auto;" autoplay muted loop playsinline>
+          <source src="images/MESD/vid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    <p class="video-caption"><strong>Linear Stage Actuation Animation</strong></p>
+  </div>
+  
+  <div style="width: 100%; margin: 20px 0;">
+  <div style="display: flex; width: 100%; gap: 10px; justify-content: center; align-items: stretch;">
+      
+      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
+          <img src="images/MESD/unsupported.png" alt="Unsupported Analysis" 
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+      </div>
+      
+      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
+          <img src="images/MESD/support.png" alt="Supported Analysis" 
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+      </div>
 
-          <div class="project-details-container reverse">
-            <div class="project-details-image">
-              <img src="images/crane/crane_cad.jpg" alt="CAD model of acrylic crane">
-            </div>
-            <div class="project-details-text">
-              <p>I conducted comprehensive analyses on the stress state of the beam, including bending stress, shear stress, and deflection to determine 
-                the optima cross-section dimensions and material (2” × 0.25” acrylic bars). After performing gear train calculations, I decided an optimal 
-                gear ratio of 8 for a four-gear system and the optimal gear diameters to satisfy the constraints and requirements. I designed the booms 
-                and the gear trains on Solidworks. Eventually, our crane successfully lifted the 10 lb weight by one inch in just 14 seconds, well within the required time limit of one minute. 
-                The measured beam deflection was 0.24 inches, which aligns with our designed safety factor of 2.</p>
-            </div>
-          </div>
-        `,
+  </div>
+  <p class="video-caption"><strong>FEA Comparison: Original Structure (Left) vs. Optimized Structure (Right)</strong></p>
+</div>
+
+<div style="text-align: left; width: 100%; margin-top: 20px;">
+  <p>
+    <u>Analysis Comparison:</u> While designing the second linear stage, I identified a structural issue caused 
+    by the reaction force generated during fluid actuation. The pump force created a counteracting moment on one end, leading to excessive 
+    deflection that could compromise piston alignment and actuation accuracy. To address this, I optimized the structure and performed structural analysis in 
+    ANSYS to quantify end deflection. The optimized design achieved nearly 25% reduction in maximum deflection compared to the original configuration, 
+    with only minimal additional material and negligible weight increase. 
+  </p>
+</div>
+  `,
         },
-        stirling: {
-          title: "Stirling Engine",
+
+        academic: {
+          title: "Additional Academic Projects",
           image: "images/engine/engine.jpg",
           details: `
-          <div class="project-details-container">
-            <div class="project-details-image">
-              <img src="images/engine/engine.jpg" alt="Stirling engine assembly">
-            </div>
-            <div class="project-details-text">
-              <p>For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components. I followed detailed 
+  <div class="project-details-container">
+    <div class="project-details-image">
+      <img src="images/engine/engine.jpg" alt="Stirling engine assembly">
+    </div>
+    <div class="project-details-text">
+      <p><u>Stirling Engine:</u> For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components. I followed detailed 
                 process sheets provided for some parts and developed my own for others, specifying machining steps such as end mill diameter 
                 selection, chamfering requirements, and appropriate spindle speeds on the lathe. Using the lathe, mill, and other machine tools 
                 in the lab, I manufactured most of the components, including the piston wheel, piston housing, and piston post. I produced the 
                 flywheel through sand casting and subsequently machined it to final dimensions. Finally, I assembled a fully functional Stirling 
                 engine that operates at approximately 200 RPM.</p>
- 
-              
-            </div>
-          </div>
-          <video class="project-video" controls>
-            <source src="images/engine/engine.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        `,
+    </div>
+  </div>
+  <video class="project-video" controls>
+    <source src="images/engine/engine.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+  <div class="project-details-container">
+    <div class="project-details-image">
+      <img src="images/crane/crane_top.jpg" alt="Acrylic Crane">
+    </div>
+    <div class="project-details-text">
+      <p><u>Acrylic Crane:</u> In this project, we are required to design and construct a crane that is capable of lifting a 10lb weight up by one inch under 
+                one minute. The crane should not have a maximum deflection of more than 0.5”. We are given a 6V gearmotor with a stall torque of 
+                12 oz-in and a 7.75” x 7.75” x ¼” acrylic plate, and we are allowed to purchase $25 worth of materials. </p>
+    </div>
+  </div>
+
+  <div class="project-details-container reverse">
+    <div class="project-details-image">
+      <img src="images/crane/crane_cad.jpg" alt="Crane CAD">
+    </div>
+    <div class="project-details-text">
+      <p>I conducted comprehensive analyses on the stress state of the beam, including bending stress, shear stress, and deflection to determine 
+                the optima cross-section dimensions and material (2” × 0.25” acrylic bars). After performing gear train calculations, I decided an optimal 
+                gear ratio of 8 for a four-gear system and the optimal gear diameters to satisfy the constraints and requirements. I designed the booms 
+                and the gear trains on Solidworks. Eventually, our crane successfully lifted the 10 lb weight by one inch in just 14 seconds, well within the required time limit of one minute. 
+                The measured beam deflection was 0.24 inches, which aligns with our designed safety factor of 2.</p>
+    </div>
+  </div>
+  `,
         },
       };
 
@@ -700,14 +767,14 @@
       function openProjectLightbox(projectId) {
         const project = projects[projectId];
         const lightboxContent = document.getElementById(
-          "project-lightbox-content"
+          "project-lightbox-content",
         );
         const caption = document.getElementById("caption");
         // Push a new history state to ensure back button works
         window.history.pushState(
           { page: projectId },
           project.title,
-          `#${projectId}`
+          `#${projectId}`,
         );
         lightboxContent.innerHTML = `
       <h3>${project.title}</h3>
@@ -729,7 +796,7 @@
       function closeLightbox() {
         // Pause all videos in the lightbox content
         const videos = document.querySelectorAll(
-          "#project-lightbox-content video"
+          "#project-lightbox-content video",
         );
         videos.forEach((video) => video.pause());
 
@@ -742,7 +809,7 @@
       function navigateFromLightbox(sectionId) {
         // Pause all videos in the lightbox content
         const videos = document.querySelectorAll(
-          "#project-lightbox-content video"
+          "#project-lightbox-content video",
         );
         videos.forEach((video) => video.pause());
 
