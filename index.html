@@ -1,18 +1,29 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Han Zheng | Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <style>
       .project-details-container {
         display: flex;
+
         justify-content: center;
+
         align-items: flex-start;
+
         max-width: 1300px;
+
         margin: 20px auto;
+
         gap: 40px;
       }
 
@@ -22,26 +33,39 @@
 
       .project-details-image {
         flex: 0 0 40%; /* Increased from 30% to give more width */
+
         /* height: 250px; /* Slightly reduced height, adjust as needed */
+
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         background-color: white; /* Set background to white */
       }
 
       .project-details-image img {
         max-width: 100%;
+
         /* Set a max-height to respect the container's height */
+
         max-height: 100%;
+
         height: auto;
+
         width: auto;
+
         /* Use 'contain' to ensure the whole image is visible without being cropped */
+
         object-fit: contain;
+
         display: block;
       }
 
       .project-details-text {
         flex: 0 0 55%;
+
         text-align: left;
       }
 
@@ -50,6 +74,7 @@
       }
 
       /* ADD THESE TWO NEW CLASSES */
+
       .project-details-image-large {
         flex: 0 0 60%; /* Increase image width from 40% to 60% */
       }
@@ -59,20 +84,27 @@
       }
 
       /* Style for centered video in Stirling Engine project */
+
       .project-video {
         display: block;
+
         max-width: 70%;
+
         height: auto;
+
         margin: 20px auto;
       }
 
       .video-caption {
         text-align: center;
+
         margin-top: 5px;
+
         font-size: 1rem;
       }
 
       /* Font size increase for project descriptions */
+
       .lightbox-content p,
       .lightbox-content ul {
         font-size: 1.125rem; /* Increased from default ~16px to 18px */
@@ -82,16 +114,19 @@
         .project-details-container,
         .project-details-container.reverse {
           flex-direction: column;
+
           align-items: center;
         }
 
         .project-details-image {
           flex: 0 0 auto;
+
           margin-bottom: 20px;
         }
 
         .project-details-text {
           flex: 0 0 auto;
+
           text-align: center;
         }
 
@@ -100,6 +135,7 @@
         }
 
         /* Adjust font size for mobile */
+
         .lightbox-content p,
         .lightbox-content ul {
           font-size: 1rem; /* ~16px for mobile */
@@ -107,25 +143,33 @@
       }
     </style>
   </head>
+
   <body>
     <header class="hero" data-aos="fade-in">
       <div class="nav-container">
         <nav id="nav-links">
           <a href="#about">About</a>
+
           <a href="#resume">Resume</a>
+
           <a href="#projects">Projects</a>
+
           <a href="#contact">Contact</a>
         </nav>
+
         <button id="hamburger">☰</button>
       </div>
+
       <div class="hero-content">
         <h1>Han Zheng</h1>
+
         <p class="subtitle">Mechanical Engineering Portfolio</p>
       </div>
     </header>
 
     <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
+
       <div class="about-container">
         <div class="about-image">
           <img
@@ -134,10 +178,12 @@
             class="profile-img"
           />
         </div>
+
         <div class="about-text">
           <p>
             Hi! I’m Han, a Mechanical Engineering senior with a focus on
             Aerospace. My name is spelled just like Han Solo from
+
             <em>Star Wars</em> and Han from <em>Fast & Furious</em>—though I
             haven’t piloted a spaceship or drifted through Tokyo (yet). I really
             enjoy designing (especially aircrafts!), verifying my designs
@@ -150,6 +196,7 @@
 
     <section id="resume" data-aos="fade-up">
       <h2>Resume</h2>
+
       <p>
         <a href="HanZheng_Resume.pdf" target="_blank"
           >Download My Resume (PDF)</a
@@ -159,9 +206,11 @@
 
     <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
+
       <div class="project-grid">
         <div class="project-card" onclick="openProjectLightbox('aec')">
           <img src="images/aec/aec_profile.jpg" alt="aec" class="project-img" />
+
           <span class="project-title"
             >Albany Engineered Composites Internship</span
           >
@@ -173,6 +222,7 @@
             alt="DBF RC plane during manufacturing"
             class="project-img"
           />
+
           <span class="project-title">Design Build Fly</span>
         </div>
 
@@ -182,6 +232,7 @@
             alt="Structural & Fluid Simulation"
             class="project-img"
           />
+
           <span class="project-title">Structural & Fluid Simulation</span>
         </div>
 
@@ -191,6 +242,7 @@
             alt="3D airflow simulation around VFOX descent sphere"
             class="project-img"
           />
+
           <span class="project-title">VFOX Accommodation, DAVINCI Mission</span>
         </div>
 
@@ -200,6 +252,7 @@
             alt="Senior Design Project"
             class="project-img"
           />
+
           <span class="project-title">Senior Design Project</span>
         </div>
 
@@ -209,6 +262,7 @@
             alt="Additional Academic Projects"
             class="project-img"
           />
+
           <span class="project-title">Additional Academic Projects</span>
         </div>
       </div>
@@ -216,9 +270,12 @@
 
     <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
+
       <p>Email: hzheng34@jh.edu</p>
+
       <p>
         LinkedIn:
+
         <a
           href="https://www.linkedin.com/in/han-zheng-91b502257"
           target="_blank"
@@ -232,19 +289,26 @@
     <div id="lightbox" class="lightbox">
       <div class="lightbox-nav">
         <button id="lightbox-hamburger">☰</button>
+
         <nav id="lightbox-nav-links">
           <a href="#about" onclick="navigateFromLightbox('about')">About</a>
+
           <a href="#resume" onclick="navigateFromLightbox('resume')">Resume</a>
+
           <a href="#projects" onclick="navigateFromLightbox('projects')"
             >Projects</a
           >
+
           <a href="#contact" onclick="navigateFromLightbox('contact')"
             >Contact</a
           >
         </nav>
       </div>
+
       <span class="close" onclick="closeLightbox()">×</span>
+
       <div class="lightbox-content" id="project-lightbox-content"></div>
+
       <div id="caption"></div>
     </div>
 
@@ -253,11 +317,14 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
       AOS.init();
 
       // Main Navigation Hamburger Menu Toggle
+
       const hamburger = document.getElementById("hamburger");
+
       const navLinks = document.getElementById("nav-links");
 
       hamburger.addEventListener("click", () => {
@@ -265,7 +332,9 @@
       });
 
       // Lightbox Navigation Hamburger Menu Toggle
+
       const lightboxHamburger = document.getElementById("lightbox-hamburger");
+
       const lightboxNavLinks = document.getElementById("lightbox-nav-links");
 
       lightboxHamburger.addEventListener("click", () => {
@@ -273,6 +342,7 @@
       });
 
       // Back to Top Button
+
       const backToTop = document.getElementById("backToTop");
 
       window.addEventListener("scroll", () => {
@@ -288,538 +358,1029 @@
       });
 
       // Project Data
+
       const projects = {
         aec: {
           title: "Albany Engineered Composites Internship",
+
           image: "images/aec/aec_profile.jpg",
+
           details: `
+
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/aec/verve.jpg" alt="VERVE">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Crimp vs Elastic Properties: </u>During my internship as a Mechanical Engineering R&T Intern at Albany Engineered Composites, I studied how fiber crimp—essentially 
-                the waviness of fibers—affects the elastic properties of 3D woven composites. The work utilized a fully automated, scripted modeling approach. First, using a virtual model reconstructed from µCT scans, I 
-                processed and compacted the geometry in LS-DYNA, and then selected a representative unit cell to mesh and assign material properties. 
-                I conducted Abaqus simulations to determine the elastic modulus, shear modulus, and Poisson’s ratios in the warp, weft, and 
+
+              <p> <u>Crimp vs Elastic Properties: </u>During my internship as a Mechanical Engineering R&T Intern at Albany Engineered Composites, I studied how fiber crimp—essentially
+
+                the waviness of fibers—affects the elastic properties of 3D woven composites. The work utilized a fully automated, scripted modeling approach. First, using a virtual model reconstructed from µCT scans, I
+
+                processed and compacted the geometry in LS-DYNA, and then selected a representative unit cell to mesh and assign material properties.
+
+                I conducted Abaqus simulations to determine the elastic modulus, shear modulus, and Poisson’s ratios in the warp, weft, and
+
                 through-thickness directions. A total of 24 cases were analyzed, with 12 using polymer matrix composites (PMC) and 12 using ceramic matrix
+
                 composites (CMC). The image on the left illustrates the meshed model.
+
               </p>
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container reverse">
+
             <div class="project-details-image">
+
               <img src="images/aec/fixture.jpg" alt="fixture" style="max-width: 60%; margin: 0 auto;">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Fixture Design: </u>Another project I undertook was designing a fixture to secure woven preforms during µCT scanning. The preforms had a fixed cross section of 
-                3.5" × 4" but varied in thickness up to 2". I designed the fixture to meet key constraints, including centering the preform in all three directions, 
-                accommodating thickness adjustments, and using a material compatible with µCT scanning and lower in density than carbon fiber. The final fixture was 
+
+              <p> <u>Fixture Design: </u>Another project I undertook was designing a fixture to secure woven preforms during µCT scanning. The preforms had a fixed cross section of
+
+                3.5" × 4" but varied in thickness up to 2". I designed the fixture to meet key constraints, including centering the preform in all three directions,
+
+                accommodating thickness adjustments, and using a material compatible with µCT scanning and lower in density than carbon fiber. The final fixture was
+
                 3D-printed in ABS. The isometric view of the fixture is shown on the right, and video illustrations are provided at the end of the page for further clarification. </p>
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/aec/fea_stress_strain.jpg" alt="FEA Project">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u> Compaction FEA: </u>Towards the end of my internship, I worked on addressing an issue with preform compaction. The preform would spring back after the compaction process, 
-                making it difficult to study its geometry in the compacted state. One solution was to scan the preform while it remained inside the compaction fixture. 
-                To ensure high-quality µCT scans, the fixture material needs to have a lower density than carbon fiber while maintaining sufficient stiffness. I 
-                used experimental data from prior tests to obtain elastic modulus values at selected strain levels and wrote a subroutine to model the nonlinear 
+
+              <p> <u> Compaction FEA: </u>Towards the end of my internship, I worked on addressing an issue with preform compaction. The preform would spring back after the compaction process,
+
+                making it difficult to study its geometry in the compacted state. One solution was to scan the preform while it remained inside the compaction fixture.
+
+                To ensure high-quality µCT scans, the fixture material needs to have a lower density than carbon fiber while maintaining sufficient stiffness. I
+
+                used experimental data from prior tests to obtain elastic modulus values at selected strain levels and wrote a subroutine to model the nonlinear
+
                 hyperelastic behavior of the preform. I chose maple wood as the fixture material for its low density, adequate stiffness, and ease of prototyping. </p>
-        
+
+       
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container reverse">
+
             <div class="project-details-image">
+
               <img src="images/aec/tow.jpg" alt="Tow Friction">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Friction Tests: </u>I spent a significant portion of my internship conducting experiments to study tow friction within woven preforms. Lower tow friction is known to 
-                improve bulk reduction and reduce the occurrence of fiber buckling during the forming process. For this project, I examined tow friction in preforms 
-                with varying architectures under different conditions: dry, wet, and elevated temperature (50-100 °C). The experimental setup is shown in the illustration 
-                on the right: the tow was clamped by an aluminum connector (shown in orange), which was attached to a rope that routed over a roller pulley. Weight was gradually 
+
+              <p> <u>Friction Tests: </u>I spent a significant portion of my internship conducting experiments to study tow friction within woven preforms. Lower tow friction is known to
+
+                improve bulk reduction and reduce the occurrence of fiber buckling during the forming process. For this project, I examined tow friction in preforms
+
+                with varying architectures under different conditions: dry, wet, and elevated temperature (50-100 °C). The experimental setup is shown in the illustration
+
+                on the right: the tow was clamped by an aluminum connector (shown in orange), which was attached to a rope that routed over a roller pulley. Weight was gradually
+
                 added to the bucket until the tow pulled out of the preform, and the corresponding weight was recorded as the measure of tow friction.  </p>
+
             </div>
+
           </div>
-          
+
+         
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
           <video class="project-video" controls>
+
             <source src="images/aec/fixture_collapse.mp4" type="video/mp4">
+
             Your browser does not support the video tag.
+
           </video>
+
             <p class="video-caption">Collapsing the exploded view of the fixture; the grey panel in the middle is the preform</p>
-    
+
+   
+
           <video class="project-video" controls>
+
             <source src="images/aec/thickness_adjust.mp4" type="video/mp4">
+
             Your browser does not support the video tag.
+
           </video>s
+
             <p class="video-caption">Thickness adjustment to secure the preform</p>
-          
+
+         
+
           <video class="project-video" controls>
+
             <source src="images/aec/fea_vid.mp4" type="video/mp4">
+
             Your browser does not support the video tag.
+
           </video>
+
             <p class="video-caption">Animated compaction process</p>
-  
+
+ 
+
+
 
         `,
         },
+
         dbf: {
           title: "Design Build Fly (DBF)",
+
           image: "images/dbf/plane_title.JPG",
+
           details: `
+
           <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 30px;">2026 Competition</h2>
 
+
+
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/dbf/fuselage.png" alt="2026 DBF Plane">
+
             </div>
+
             <div class="project-details-text">
+
               <p> <u>Overview: </u> For this year’s competition, I am serving as the team’s Chief Engineer, overseeing all stages of the aircraft development process, from conceptual design to manufacturing across all subteams.
-                In addition to managing a 15-member team, I am directly responsible for much of the aircraft’s design and fabrication, with a particular focus on fuselage design and integration. My primary goal is to develop a lightweight aircraft utilizing 
-                fiber wet layup to maximize payload capacity, which is a key mission objective this year. The image on the left shows the preliminary CAD design of the aircraft. </p>       
+
+                In addition to managing a 15-member team, I am directly responsible for much of the aircraft’s design and fabrication, with a particular focus on fuselage design and integration. My primary goal is to develop a lightweight aircraft utilizing
+
+                fiber wet layup to maximize payload capacity, which is a key mission objective this year. The image on the left shows the preliminary CAD design of the aircraft. </p>      
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container reverse">
+
             <div class="project-details-image project-details-image-large">
+
               <img src="images/dbf/scaledown.jpg" alt="A key component from the 2026 project">
+
             </div>
+
             <div class="project-details-text project-details-text-small">
-              <p><u>Fuselage Manufacturing: </u>To successfully manufacture a lightweight carbon fiber fuselage, I first experimented with a scaled-down prototype (top-left image showing one half of the fuselage). The female mold for this prototype was CNC-milled using 
-                toolpaths generated in VCarve. After validating the manufacturing worflow, I progressed to the full-scale fuselage. I treated the mold with a layer of coating epoxy to create a solid mold surface. After multiple iterations of sanding, I applied three layers of PVA as mold release agents. 
-                Alongside my team members, I performed a three-layer layup of 2×2 twill weave carbon fiber cloth in the 0/90°, ±45°, 0/90° orientation. After applying release fabrics, I vacuum-bagged the layup at room temperature for nine hours to cure. The rest of the images on 
+
+              <p><u>Fuselage Manufacturing: </u>To successfully manufacture a lightweight carbon fiber fuselage, I first experimented with a scaled-down prototype (top-left image showing one half of the fuselage). The female mold for this prototype was CNC-milled using
+
+                toolpaths generated in VCarve. After validating the manufacturing worflow, I progressed to the full-scale fuselage. I treated the mold with a layer of coating epoxy to create a solid mold surface. After multiple iterations of sanding, I applied three layers of PVA as mold release agents.
+
+                Alongside my team members, I performed a three-layer layup of 2×2 twill weave carbon fiber cloth in the 0/90°, ±45°, 0/90° orientation. After applying release fabrics, I vacuum-bagged the layup at room temperature for nine hours to cure. The rest of the images on
+
                 the right show the vacuum bagging process in action, the cured top half of the fuselage, and me performing wet layup.</p>
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/dbf/wing_fea.jpg" alt="wing fea">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Wing FEA: </u> To validate the wing's structural design, I performed a Finite Element Analysis (FEA) in Abaqus (free student version). The model simulated an assembly of an XPS foam core insert, an internal carbon fiber spar, and a skin made 
-                from wet layup of two layers of ±45° bidirectional carbon fiber. A distributed lift force (scaled to simulate a 6G maneuver) calculated from aerodynamic parameters, was applied to the cantilevered wing structure. The results confirmed 
+
+              <p> <u>Wing FEA: </u> To validate the wing's structural design, I performed a Finite Element Analysis (FEA) in Abaqus (free student version). The model simulated an assembly of an XPS foam core insert, an internal carbon fiber spar, and a skin made
+
+                from wet layup of two layers of ±45° bidirectional carbon fiber. A distributed lift force (scaled to simulate a 6G maneuver) calculated from aerodynamic parameters, was applied to the cantilevered wing structure. The results confirmed
+
                 the design's integrity, showing minimal deflection and stress levels safely below material failure points. </p>
+
             </div>
+
           </div>
+
+
 
           <div class="project-details-container reverse">
+
             <div class="project-details-image project-details-image-large">
+
               <img src="images/dbf/fea.png" alt="A key component from the 2026 project">
+
             </div>
+
             <div class="project-details-text project-details-text-small">
-              <p><u>Fuselage FEA: </u>To assess the structural integrity of the fuselage, I performed multiple FEA simulations in ANSYS ranging from a drop test, wing mount loading, and torsion load cases. From these analyses, I identified regions of high stress 
+
+              <p><u>Fuselage FEA: </u>To assess the structural integrity of the fuselage, I performed multiple FEA simulations in ANSYS ranging from a drop test, wing mount loading, and torsion load cases. From these analyses, I identified regions of high stress
+
                 concentration, which informed the placement of localized reinforcement plies. Selected modeling details are discussed in the
+
                 <a href="javascript:void(0)" onclick="openProjectLightbox('simulation')" style="color: limegreen; font-weight: bold; text-decoration: underline;">
+
                 Structural and Fluid Simulation</a> project page.</p>
+
             </div>
+
           </div>
 
+
+
           <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+
             <p>For more details about our aircraft design, see the competition report attached below:</p>
+
             <p style="margin-top: 10px; font-size: 1.125rem;">
+
             <a href="2026DBF_JOHNS_HOPKINS_UNIVERSITY_DESIGN_REPORT.pdf" target="_blank">
+
                 Download the 2026 Competition Report (PDF)
+
               </a>
+
             </p>
+
           </div>
-          
+
+         
+
           <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+
             <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 15px;">Below is the drawing packages of the aircraft I made. </p>
-    
+
+   
+
               <div style="width: 100%; max-width: 1000px; margin: 20px auto; border: 1px solid #ccc;">
-                <iframe 
-                  src="dbf_drawing.pdf" 
-                  width="100%" 
-                  height="600px" 
+
+                <iframe
+
+                  src="dbf_drawing.pdf"
+
+                  width="100%"
+
+                  height="600px"
+
                   style="border: none;">
+
                 </iframe>
+
               </div>
+
             <p style="margin-top: 10px; font-size: 1.125rem;">
+
         </p>
+
       </div>
 
-          <img src="images/dbf/latest.jpg" alt="Latest Aircraft Update (2/03/2026)" class="project-video" style="border-radius: 4px;">
-          <p class="video-caption">Latest Aircraft Update (02/03/2026)</p>
+
+
+          <img src="images/dbf/v1.jpg" alt="Photo of the aircraft during maiden flight" class="project-video" style="border-radius: 4px;">
+
+          <p class="video-caption">Photo of the aircraft from the test flight</p>
+<video class="project-video" style="max-width: 90%; margin-top: 40px;" controls>
+  <source src="images/dbf/first_flight.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p class="video-caption">First Flight Test Video</p>
+
 
           <hr style="display: block; height: 2px; background: #cccccc; width: 90%; margin: 70px auto; border: none;">
 
 
+
+
+
           <h2 style="text-align: center; font-size: 1.8rem; margin-top: 50px; margin-bottom: 30px;">2025 Competition</h2>
 
+
+
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/dbf/plane.jpg" alt="DBF RC plane overview">
+
             </div>
+
             <div class="project-details-text">
+
               <p> <u>Overview: </u> For the 2024–2025 season, I served as the Lead Mechanical Engineer for our competition team.
-                The image on the left shows the aircraft we designed and built for this year’s competition. With limited professional mentorship, 
-                funding, and team members, I took on tasks ranging from calculating the minimum dimensions of the carbon fiber 
+
+                The image on the left shows the aircraft we designed and built for this year’s competition. With limited professional mentorship,
+
+                funding, and team members, I took on tasks ranging from calculating the minimum dimensions of the carbon fiber
+
                 spar to performing manual composite layups for control surfaces.
+
               </p>
+
             </div>
+
           </div>
+
+
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
           <div class="project-details-container reverse">
+
             <div class="project-details-image">
+
               <img src="images/dbf/layup.jpg" alt="CAD model of DBF tail assembly">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Empennage Design and Manufacturing: </u>I designed the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and 
-                a tail box that enables quick attachment of the horizontal and vertical stabilizers. To reduce weight while maintaining 
-                structural strength, I performed a wet layup of carbon fiber on all control surfaces (rudder, elevator, and 
-                ailerons), which were initially hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces 
+
+              <p> <u>Empennage Design and Manufacturing: </u>I designed the empennage assembly using Onshape. The tail features a rotatable tail gear linked to rudder movement and
+
+                a tail box that enables quick attachment of the horizontal and vertical stabilizers. To reduce weight while maintaining
+
+                structural strength, I performed a wet layup of carbon fiber on all control surfaces (rudder, elevator, and
+
+                ailerons), which were initially hot-wire cut foam cores. I used a Dremel to clean up edges of the control surfaces
+
                 to improve aerodynamics and aesthetics. </p>
-              
+
+             
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/dbf/pylon.jpg" alt="DBF pylon structure" style="max-width: 70%; margin: 0 auto;">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Pylon Design: </u>I designed the pylon as an attachment structure to support an external, weight-carrying tank used as the payload. 
+
+              <p> <u>Pylon Design: </u>I designed the pylon as an attachment structure to support an external, weight-carrying tank used as the payload.
+
                 The pylon itself can be attached to the wing spar through a slotted hole interface, allowing for quick installation and removal.
+
                 The payload can be secured to the pylon using zip ties. </p>
-        
+
+       
+
             </div>
+
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div class="project-details-container reverse">
+
             <div class="project-details-image">
+
               <img src="images/dbf/servo_part.jpg" alt="Servo motor component for DBF plane" style="max-width: 60%; margin: 0 auto;">
+
             </div>
+
             <div class="project-details-text">
+
               <p> <u>Servo Platform: </u>I customized servo motor platforms to mount the servos controlling the rudder, elevator, and ailerons. Each servo is
-                secured using multiple metal L-brackets, which I fabricated through shearing, bending, and punching. The L-brackets 
+
+                secured using multiple metal L-brackets, which I fabricated through shearing, bending, and punching. The L-brackets
+
                 are bolted directly onto the plywood platforms. </p>
+
             </div>
+
           </div>
+
+
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/dbf/cfd.jpg" alt="DBF pylon structure">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>Aerodynamic Modeling: </u>To explore ways of reducing aerodynamic drag, I conducted a computational fluid dynamics (CFD) simulation of a custom 
-                housing for the weight-carrying tank at an airspeed of 20 m/s using SimScale. Although the housing was not 
+
+              <p> <u>Aerodynamic Modeling: </u>To explore ways of reducing aerodynamic drag, I conducted a computational fluid dynamics (CFD) simulation of a custom
+
+                housing for the weight-carrying tank at an airspeed of 20 m/s using SimScale. Although the housing was not
+
                 implemented in the final design, analyzing surface pressure distributions and surrounding velocity fields informed general flow
+
                 behavior and affected my design decisions.  </p>
-        
+
+       
+
             </div>
+
           </div>
+
       `,
         },
+
         simulation: {
           title: "Structural & Fluid Simulation",
+
           image: "images/simulation/title.jpg",
+
           details: `
+
           <div class="project-details-container">
+
             <div class="project-details-image">
+
               <img src="images/simulation/a380.jpg" alt="A380 Simulation">
+
             </div>
+
             <div class="project-details-text">
-              <p> <u>FEA Midterm Project: </u> For my midterm project in the FEA course, I analyzed the structural integrity of an A380 fuselage section using 
-                <strong> Creo Simulate</strong>. The model included the fuselage skin, longerons, and frames, and for simplicity I used Al7075-T6 and Al2024-T3 as 
-                the primary materials. I evaluated three load cases: internal pressurization (result contour shown on the left), bending, and torsion. To ensure computational efficiency, I 
-                applied beam and shell idealizations. A mesh sensitivity study was performed by comparing default meshes with refined multi-pass meshes. 
-                The results showed that Von Mises stresses and displacements remained within the required safety factor of 1.5 and satisfied all deflection limits. 
+
+              <p> <u>FEA Midterm Project: </u> For my midterm project in the FEA course, I analyzed the structural integrity of an A380 fuselage section using
+
+                <strong> Creo Simulate</strong>. The model included the fuselage skin, longerons, and frames, and for simplicity I used Al7075-T6 and Al2024-T3 as
+
+                the primary materials. I evaluated three load cases: internal pressurization (result contour shown on the left), bending, and torsion. To ensure computational efficiency, I
+
+                applied beam and shell idealizations. A mesh sensitivity study was performed by comparing default meshes with refined multi-pass meshes.
+
+                The results showed that Von Mises stresses and displacements remained within the required safety factor of 1.5 and satisfied all deflection limits.
+
                 In addition to this project, I practiced mesh controls, thermal analysis, topology optimization, and many other tools in Creo Simulate. </p>
+
             </div>
+
           </div>
+
+
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
           <div style="display: flex; gap: 30px; align-items: flex-start; max-width: 1300px; margin: 0 auto;">
-            
+
+           
+
             <div style="flex: 0 0 60%;">
-              
+
+             
+
               <video controls style="width: 100%; display: block; margin: 0; padding: 0;">
+
                   <source src="images/simulation/plane_main.mp4" type="video/mp4">
+
                   Your browser does not support the video tag.
+
               </video>
 
+
+
               <div style="display: flex; width: 100%; margin: 0; padding: 0;">
+
                  <video controls style="width: 50%; display: block; margin: 0; padding: 0; object-fit: cover;">
+
                   <source src="images/simulation/main_gear.mp4" type="video/mp4">
+
                   Your browser does not support the video tag.
+
                 </video>
+
                  <video controls style="width: 50%; display: block; margin: 0; padding: 0; object-fit: cover;">
+
                   <source src="images/simulation/tail_gear.mp4" type="video/mp4">
+
                   Your browser does not support the video tag.
+
                 </video>
+
               </div>
 
+
+
             </div>
 
+
+
             <div style="flex: 1; text-align: left; padding-left: 10px;">
-              <p style="margin-top: 0;"> 
-                <u>FEA Final Project: </u> For my final project, I simulated both a drop test and a torsion test for the Design/Build/Fly aircraft I designed. 
-                The goal was to ensure the airframe can withstand a hard landing without fracturing and sustain torsional loads during flight. All simulations were performed in ANSYS, and the results 
+
+              <p style="margin-top: 0;">
+
+                <u>FEA Final Project: </u> For my final project, I simulated both a drop test and a torsion test for the Design/Build/Fly aircraft I designed.
+
+                The goal was to ensure the airframe can withstand a hard landing without fracturing and sustain torsional loads during flight. All simulations were performed in ANSYS, and the results
+
                 are shown on the left.
+
                 <br><br>
-                The model includes the carbon fiber fuselage shell and the landing gear assemblies. The fuselage shell was prepared in ACP (Pre) using a custom layup configuration (described in more detail on the Design/Build/Fly project page). 
-                The main gear and tail gear were modeled as separate solid bodies. The drop test was conducted using an explicit dynamics simulation in which the aircraft was released from a height of 2 feet. 
-                For the torsion test, a 150 lb-in moment was applied to the fuselage. From these analyses, I identified the high-stress regions most susceptible to failure, and I plan to reinforce those areas 
-                with additional carbon fiber strips. 
+
+                The model includes the carbon fiber fuselage shell and the landing gear assemblies. The fuselage shell was prepared in ACP (Pre) using a custom layup configuration (described in more detail on the Design/Build/Fly project page).
+
+                The main gear and tail gear were modeled as separate solid bodies. The drop test was conducted using an explicit dynamics simulation in which the aircraft was released from a height of 2 feet.
+
+                For the torsion test, a 150 lb-in moment was applied to the fuselage. From these analyses, I identified the high-stress regions most susceptible to failure, and I plan to reinforce those areas
+
+                with additional carbon fiber strips.
+
                 <br><br>
-                Besides this project, I have also practiced hexahedral meshing complex parts, implementing various types of contacts, performing nonlinear simulations, etc. 
+
+                Besides this project, I have also practiced hexahedral meshing complex parts, implementing various types of contacts, performing nonlinear simulations, etc.
+
               </p>
+
             </div>
+
+
 
           </div>
 
+
+
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
+
+
 
           <div style="display: flex; gap: 30px; align-items: flex-start; max-width: 1300px; margin: 0 auto;">
-            
+
+           
+
             <div style="flex: 0 0 50%; display: flex; flex-direction: column; gap: 10px;">
+
                <img src="images/simulation/streamline.png" alt="CFD Streamline" style="width: 100%; height: auto; display: block;">
+
                <img src="images/simulation/contour.png" alt="CFD Contour" style="width: 100%; height: auto; display: block;">
+
             </div>
+
+
 
             <div style="flex: 1; text-align: left; padding-left: 10px;">
-              <p style="margin-top: 0;"> 
-                <u>Landing Gear Fairing CFD Simulation: </u> 
-                To improve the aerodynamic efficiency of the Design/Build/Fly aircraft, I conducted a CFD analysis in ANSYS CFX to evaluate whether the drag reduction from landing gear wheel fairings 
+
+              <p style="margin-top: 0;">
+
+                <u>Landing Gear Fairing CFD Simulation: </u>
+
+                To improve the aerodynamic efficiency of the Design/Build/Fly aircraft, I conducted a CFD analysis in ANSYS CFX to evaluate whether the drag reduction from landing gear wheel fairings
+
                 justified their added weight. Using the Shear Stress Transport (SST) turbulence model with an inlet velocity of 26 m/s, I simulated airflow over both exposed and faired landing gear
-                 configurations. Selected results, including streamlines and velocity contours, are shown. The fairings reduced wake turbulence and decreased drag by 0.076 N (≈5%). A trade-off 
-                 analysis comparing this drag savings to the added weight penalty (0.392 N) resulted in a net aerodynamic benefit of 0.027 N, confirming that the fairings improve overall aircraft 
+
+                 configurations. Selected results, including streamlines and velocity contours, are shown. The fairings reduced wake turbulence and decreased drag by 0.076 N (≈5%). A trade-off
+
+                 analysis comparing this drag savings to the added weight penalty (0.392 N) resulted in a net aerodynamic benefit of 0.027 N, confirming that the fairings improve overall aircraft
+
                  performance.
+
               </p>
+
+            </div>
+
+
+
+          </div>
+
+          `,
+        },
+
+        vfox: {
+          title: "VfOx Accommodation, DAVINCI Mission",
+
+          image: "images/vfox/Vfox1.jpg",
+
+          details: `
+
+          <div class="project-details-container">
+
+            <div class="project-details-image">
+
+              <img src="images/vfox/Vfox1.jpg" alt="3D airflow simulation around VFOX descent sphere">
+
+            </div>
+
+            <div class="project-details-text">
+
+              <p> As a student collaborator in the VfOx (Venus Oxygen Fugacity sensor) team, a part of the DAVINCI (Deep Atmosphere Venus
+
+                Investigation of Noble gases, Chemistry, and Imaging) Mission, I was tasked with assessing the proposed VfOx accommodations on
+
+                the descent sphere. </p>
+
+             
+
             </div>
 
           </div>
-          `,
-        },
-        vfox: {
-          title: "VfOx Accommodation, DAVINCI Mission",
-          image: "images/vfox/Vfox1.jpg",
-          details: `
-          <div class="project-details-container">
-            <div class="project-details-image">
-              <img src="images/vfox/Vfox1.jpg" alt="3D airflow simulation around VFOX descent sphere">
-            </div>
-            <div class="project-details-text">
-              <p> As a student collaborator in the VfOx (Venus Oxygen Fugacity sensor) team, a part of the DAVINCI (Deep Atmosphere Venus 
-                Investigation of Noble gases, Chemistry, and Imaging) Mission, I was tasked with assessing the proposed VfOx accommodations on 
-                the descent sphere. </p>
-              
-            </div>
-          </div>
+
+
 
           <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
           <div class="project-details-container reverse">
+
             <div class="project-details-image">
+
               <img src="images/vfox/velocity_distribution.jpg" alt="Velocity distribution around VFOX descent sphere">
+
             </div>
+
             <div class="project-details-text">
+
               <p>
-                I simulated airflow around the descent sphere at a descent speed of 20 m/s using COMSOL Multiphysics, identifying regions of 
-                flow separation and stagnant airflow. Based on these findings, I developed a proposal for 
-                VfOx sensor accommodation. To guide decision-making, I created a 5×5 risk matrix to evaluate 
+
+                I simulated airflow around the descent sphere at a descent speed of 20 m/s using COMSOL Multiphysics, identifying regions of
+
+                flow separation and stagnant airflow. Based on these findings, I developed a proposal for
+
+                VfOx sensor accommodation. To guide decision-making, I created a 5×5 risk matrix to evaluate
+
                 each accommodation option. I then presented my proposal to staff scientists from Johns Hopkins Applied Physics Laboratory (APL)
+
                  and Goddard Space Flight Center (GSFC). </p>
 
+
+
             </div>
+
           </div>
+
         `,
         },
+
         mesd: {
           title: "Senior Design Project",
+
           image: "images/MESD/cad.png",
+
           details: `
+
   <div class="project-details-container">
+
     <div class="project-details-image">
+
       <img src="images/MESD/cad.png" alt="Senior Design CAD">
+
     </div>
+
     <div class="project-details-text">
-      <p> <u>MRI Motion Platform:</u> This project, sponsored by the Kennedy Krieger Institute, involves 
-        designing an MRI-compatible motion platform that precisely moves a head phantom in controlled patterns to evaluate and improve MRI motion-correction systems. My team 
-        is currently developing a hydraulically actuated, three-degree-of-freedom (3-DOF) platform consisting of two linear stages and one rotational stage mounted on the 
+
+      <p> <u>MRI Motion Platform:</u> This project, sponsored by the Kennedy Krieger Institute, involves
+
+        designing an MRI-compatible motion platform that precisely moves a head phantom in controlled patterns to evaluate and improve MRI motion-correction systems. My team
+
+        is currently developing a hydraulically actuated, three-degree-of-freedom (3-DOF) platform consisting of two linear stages and one rotational stage mounted on the
+
         MRI test bed. I am primarily responsible for the structural design and analysis. The head phantom will be mounted on the top stage and positioned within the MRI head coil during testing.
+
         <i>Note that the design shown is an ongoing iteration and may be incomplete.</i>  </p>
+
     </div>
+
   </div>
+
+
 
   <div style="width: 100%; margin: 30px 0;">
+
     <div style="display: flex; width: 100%; gap: 10px; justify-content: center;">
+
         <video style="width: 50%; height: auto;" autoplay muted loop playsinline>
+
           <source src="images/MESD/vid2.mp4" type="video/mp4">
+
           Your browser does not support the video tag.
+
         </video>
+
         <video style="width: 50%; height: auto;" autoplay muted loop playsinline>
+
           <source src="images/MESD/vid.mp4" type="video/mp4">
+
           Your browser does not support the video tag.
+
         </video>
+
     </div>
+
     <p class="video-caption"><strong>Linear Stage Actuation Animation</strong></p>
-  </div>
-  
-  <div style="width: 100%; margin: 20px 0;">
-  <div style="display: flex; width: 100%; gap: 10px; justify-content: center; align-items: stretch;">
-      
-      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
-          <img src="images/MESD/unsupported.png" alt="Unsupported Analysis" 
-               style="max-width: 100%; max-height: 100%; object-fit: contain;">
-      </div>
-      
-      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
-          <img src="images/MESD/support.png" alt="Supported Analysis" 
-               style="max-width: 100%; max-height: 100%; object-fit: contain;">
-      </div>
 
   </div>
+
+ 
+
+  <div style="width: 100%; margin: 20px 0;">
+
+  <div style="display: flex; width: 100%; gap: 10px; justify-content: center; align-items: stretch;">
+
+     
+
+      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
+
+          <img src="images/MESD/unsupported.png" alt="Unsupported Analysis"
+
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+
+      </div>
+
+     
+
+      <div style="width: 50%; height: 400px; background-color: #f9f9f9; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center;">
+
+          <img src="images/MESD/support.png" alt="Supported Analysis"
+
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+
+      </div>
+
+
+
+  </div>
+
   <p class="video-caption"><strong>FEA Comparison: Original Structure (Left) vs. Optimized Structure (Right)</strong></p>
+
 </div>
+
+
 
 <div style="text-align: left; width: 100%; margin-top: 20px;">
+
   <p>
-    <u>Analysis Comparison:</u> While designing the second linear stage, I identified a structural issue caused 
-    by the reaction force generated during fluid actuation. The pump force created a counteracting moment on one end, leading to excessive 
-    deflection that could compromise piston alignment and actuation accuracy. To address this, I optimized the structure by implementing two 1/2" diameter garolite rods on the sides to better distribute the load and 
-    resist bending. I then performed structural analysis in 
+
+    <u>Analysis Comparison:</u> While designing the second linear stage, I identified a structural issue caused
+
+    by the reaction force generated during fluid actuation. The pump force created a counteracting moment on one end, leading to excessive
+
+    deflection that could compromise piston alignment and actuation accuracy. To address this, I optimized the structure by implementing two 1/2" diameter garolite rods on the sides to better distribute the load and
+
+    resist bending. I then performed structural analysis in
+
     ANSYS to quantify end deflection. The optimized design reduced maximum deflection by a factor of five compared to the original configuration.
+
   </p>
+
 </div>
+
   `,
         },
 
         academic: {
           title: "Additional Academic Projects",
+
           image: "images/engine/engine.jpg",
+
           details: `
+
   <div class="project-details-container">
+
     <div class="project-details-image">
+
       <img src="images/engine/engine.jpg" alt="Stirling engine assembly">
+
     </div>
+
     <div class="project-details-text">
-      <p><u>Stirling Engine:</u> For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components. I followed detailed 
-                process sheets provided for some parts and developed my own for others, specifying machining steps such as end mill diameter 
-                selection, chamfering requirements, and appropriate spindle speeds on the lathe. Using the lathe, mill, and other machine tools 
-                in the lab, I manufactured most of the components, including the piston wheel, piston housing, and piston post. I produced the 
-                flywheel through sand casting and subsequently machined it to final dimensions. Finally, I assembled a fully functional Stirling 
+
+      <p><u>Stirling Engine:</u> For my manufacturing lab course, I was given CAD drawings of individual Stirling engine components. I followed detailed
+
+                process sheets provided for some parts and developed my own for others, specifying machining steps such as end mill diameter
+
+                selection, chamfering requirements, and appropriate spindle speeds on the lathe. Using the lathe, mill, and other machine tools
+
+                in the lab, I manufactured most of the components, including the piston wheel, piston housing, and piston post. I produced the
+
+                flywheel through sand casting and subsequently machined it to final dimensions. Finally, I assembled a fully functional Stirling
+
                 engine that operates at approximately 200 RPM.</p>
+
     </div>
+
   </div>
+
   <video class="project-video" controls>
+
     <source src="images/engine/engine.mp4" type="video/mp4">
+
     Your browser does not support the video tag.
+
   </video>
+
+
 
   <hr style="display: block; height: 10px; background: limegreen; width: 80%; margin: 50px auto;">
 
+
+
   <div class="project-details-container">
+
     <div class="project-details-image">
+
       <img src="images/crane/crane_top.jpg" alt="Acrylic Crane">
+
     </div>
+
     <div class="project-details-text">
-      <p><u>Acrylic Crane:</u> In this project, we are required to design and construct a crane that is capable of lifting a 10lb weight up by one inch under 
-                one minute. The crane should not have a maximum deflection of more than 0.5”. We are given a 6V gearmotor with a stall torque of 
+
+      <p><u>Acrylic Crane:</u> In this project, we are required to design and construct a crane that is capable of lifting a 10lb weight up by one inch under
+
+                one minute. The crane should not have a maximum deflection of more than 0.5”. We are given a 6V gearmotor with a stall torque of
+
                 12 oz-in and a 7.75” x 7.75” x ¼” acrylic plate, and we are allowed to purchase $25 worth of materials. </p>
+
     </div>
+
   </div>
 
+
+
   <div class="project-details-container reverse">
+
     <div class="project-details-image">
+
       <img src="images/crane/crane_cad.jpg" alt="Crane CAD">
+
     </div>
+
     <div class="project-details-text">
-      <p>I conducted comprehensive analyses on the stress state of the beam, including bending stress, shear stress, and deflection to determine 
-                the optima cross-section dimensions and material (2” × 0.25” acrylic bars). After performing gear train calculations, I decided an optimal 
-                gear ratio of 8 for a four-gear system and the optimal gear diameters to satisfy the constraints and requirements. I designed the booms 
-                and the gear trains on Solidworks. Eventually, our crane successfully lifted the 10 lb weight by one inch in just 14 seconds, well within the required time limit of one minute. 
+
+      <p>I conducted comprehensive analyses on the stress state of the beam, including bending stress, shear stress, and deflection to determine
+
+                the optima cross-section dimensions and material (2” × 0.25” acrylic bars). After performing gear train calculations, I decided an optimal
+
+                gear ratio of 8 for a four-gear system and the optimal gear diameters to satisfy the constraints and requirements. I designed the booms
+
+                and the gear trains on Solidworks. Eventually, our crane successfully lifted the 10 lb weight by one inch in just 14 seconds, well within the required time limit of one minute.
+
                 The measured beam deflection was 0.24 inches, which aligns with our designed safety factor of 2.</p>
+
     </div>
+
   </div>
+
   `,
         },
       };
 
       // Project Lightbox Functionality
+
       function openProjectLightbox(projectId) {
         const project = projects[projectId];
+
         const lightboxContent = document.getElementById(
           "project-lightbox-content",
         );
+
         const caption = document.getElementById("caption");
+
         // Push a new history state to ensure back button works
+
         window.history.pushState(
           { page: projectId },
+
           project.title,
+
           `#${projectId}`,
         );
+
         lightboxContent.innerHTML = `
+
       <h3>${project.title}</h3>
+
       ${project.details}
+
     `;
+
         caption.textContent = project.alt;
+
         document.getElementById("lightbox").style.display = "flex";
+
         document.body.style.overflow = "hidden";
+
         // Reset lightbox navigation state
+
         lightboxNavLinks.classList.remove("active");
       }
 
       // Function to go back to the previous page
+
       function goBack() {
         window.history.back();
       }
 
       // Update closeLightbox to include go back functionality
+
       function closeLightbox() {
         // Pause all videos in the lightbox content
+
         const videos = document.querySelectorAll(
           "#project-lightbox-content video",
         );
+
         videos.forEach((video) => video.pause());
 
         document.getElementById("lightbox").style.display = "none";
+
         document.body.style.overflow = "auto";
+
         // Add go back navigation
+
         goBack();
       }
 
       function navigateFromLightbox(sectionId) {
         // Pause all videos in the lightbox content
+
         const videos = document.querySelectorAll(
           "#project-lightbox-content video",
         );
+
         videos.forEach((video) => video.pause());
 
         document.getElementById("lightbox").style.display = "none";
+
         document.body.style.overflow = "auto";
+
         const section = document.getElementById(sectionId);
+
         section.scrollIntoView({ behavior: "smooth" });
       }
 
       // Handle popstate to close lightbox if back button is used
+
       window.addEventListener("popstate", () => {
         if (document.getElementById("lightbox").style.display === "flex") {
           closeLightbox();
