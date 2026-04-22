@@ -23,16 +23,18 @@ body {
   position: relative;
   height: 60vh;
   background-color: #272c47;
-  background-image: url("images/DBFtitle.jpg");
+  background-image: url("images/dbf/comp4.JPG");
   background-repeat: no-repeat;
-  /* CHANGE: Use 'cover' to fill the screen and remove white space */
   background-size: cover;
-  /* CHANGE: Adjusted position to keep the plane visible on the left */
   background-position: 35% center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers name vertically */
-  align-items: flex-end; /* Keeps name on the right */
+
+  /* --- CHANGE THESE LINES --- */
+  justify-content: flex-end; /* Moves content to the bottom */
+  align-items: flex-end; /* Moves content to the right */
+  /* --------------------------- */
+
   color: white;
   overflow: hidden;
 }
@@ -60,9 +62,10 @@ body {
   position: relative;
   z-index: 2;
   text-align: right;
-  /* Adjusted margin for better aesthetic balance on wide screens */
-  margin-right: 12%;
-  margin-top: 0; /* Resetting since we are using justify-content: center */
+
+  /* --- ADJUST THESE MARGINS FOR SPACING --- */
+  margin-right: 5%; /* Distance from the right edge */
+  margin-bottom: 5%; /* Distance from the bottom edge */
 }
 
 .hero-content h1 {
